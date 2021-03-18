@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*Font config*/
+    color: #fff;
+    font-family: 'buttons';
+    font-size: 1.5vw;
+    font-weight: normal;
+    text-shadow: black 0.2vw 0.2vw;
+
+    /*no-select*/
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face{
+    font-family: 'titles';
+    src: url(fonts/super-plumber-brothers.ttf);
+}
+
+@font-face{
+    font-family: 'buttons';
+    src: url(fonts/emulogic.ttf);
+}
+
+:root{
+    --full-height: 46vw;
+    --title-color: #FFDDC9;
+    --day-color: #A1ADFF;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background:#191919;
+    display:flex;
+    align-items: center;
+}
+
+#container{
+    width:100%;
+    height: var(--full-height);
+    position: relative;
+    overflow: hidden;
+}
+
+#container .load-screen{
+    bottom: 0px;
+    left: 0px;
+    width:100%;
+    height: var(--full-height);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#333;
+    z-index: 10;
+}
+
+#container .load-screen.close{
+    opacity: 0;
+    animation: closeLoadScreen 0.3s linear;
+}
+
+#container .load-screen.start{
+    cursor: pointer;
+}
+
+#container .load-screen .content{
+    padding: 0 5vw;
+}
+
+#container .load-screen .content .title{
+    font-family: 'titles';
+    font-size: 8vw;
+    display: inline-block;
+}
+
+#container .load-screen .content .title span{
+    display: block;
+}
+
+#container .load-screen .content .sign{
+    margin-top: 4vw;
+    display: block;
+}
+
+/*QUESTIONS*/
+#container .load-screen.question{
+    text-align: center;
+}
+
+#container .load-screen.question .content .title{
+    display: block;
+}
+
+#container .load-screen.question .content .sign{
+    display: inline-block;
+}
+
+#container .load-screen.question .content .life{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+#container .load-screen.question .content .life .icon-cross{
+    font-size: 1vw;
+    margin-left: 2vw;
+    margin-right: 2.5vw;
+}
+
+#container .load-screen.question .content .life .thumb{
+    width: 2.25vw;
+    height: 3vw;
+    display: inline-block;
+    background: url(../sprites/mario/shrink/stay-right.png);
+    background-size: 100% 100%;
+}
+/**/
+#container .world{
+    width:100%;
+    height: var(--full-height);
+    position: absolute;
+    top: 0px;
+    text-align: center;
+}
+
+#container .world *{
+    z-index: 3;
+}
+
+/*COUNTER*/
+#container .counter-container{
+    width: 100%;
+    height:5vw;
+    position: absolute;
+    top: 0px;
+    z-index: 11;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+#container .counter-container.disable{
+    display: none;
+}
+
+#container .counter-container li .icon-cross{
+    font-size: 1vw;
+    display: inline-block;
+    margin: 0 0.5vw;
+}
+
+#container .counter-container li .money{
+    width: 2vw;
+    height: 1.8vw;
+    display: inline-block;
+    margin-bottom: -0.3vw;
+    background: url(../sprites/base/coin.gif);
+    background-size: 100% 100%;
+}
+
+#container .world .wallpaper{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: calc(var(--full-height) - 5vw);
+    background-size:auto 101% !important;
+    z-index: 1;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+#container .world .floor{
+    width:100%;
+    height:5vw;
+    position: absolute;
+    bottom: 0;
+    background-position:-1vw 0 !important;
+    background-size:3vw !important;
+}
+
+
+#container .world .floor #bgmusic-control{
+    position: absolute;
+    left: 4vw;
+    bottom: 1.5vw;
+    color: #fff;
+    cursor: pointer;
+}
+#container .world .floor #bgmusic-control span{
+    display: none;
+}  
+#container .world .floor #bgmusic-control.on .icon-music-on{
+    display: inline-block;
+}
+#container .world .floor #bgmusic-control.off .icon-music-off{
+    display: inline-block;
+}
+
+
+#container .world .wallpaper ul.blocks{
+    display: flex;
+    position: absolute;
+    height: 3vw;
+    list-style: none;
+}
+
+#container .world .wallpaper ul.blocks li{
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    background-size: 100% 100% !important;
+}
+
+#container .world .wallpaper ul.blocks li.hit{
+    animation: moveBlock 0.3s linear;
+}
+
+#container .world .wallpaper ul.blocks li.brick{
+    background: url(../sprites/menu/ladrillo-normal.png);
+}
+
+#container .world .wallpaper ul.blocks li.question{
+    background: url(../sprites/base/question-block.gif);
+}
+
+#container .world .wallpaper ul.blocks li.hit.question{
+    background: url(../sprites/menu/ladrillo-golpeado.png);
+}
+
+#container .world .pipe{
+    width: 10vw;
+    height: 8vw;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 7vw;
+
+}
+
+#container .world .pipe .cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../sprites/base/pipe.png);
+    background-size: 100% 100% !important;
+}
+
+#container .world .pipe.inverted .cover{
+    background: url(../sprites/base/pipe-inverted.png);
+}
+
+#container .world .pipe .answer{
+    position: absolute;
+    top: -8vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+#container .world .wallpaper .mushroom{
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    z-index: 2;
+    background:url(../sprites/base/mushroom.png);
+    background-size: 100% 100%;
+    transform: translateX(0vw) translateY(0vw);
+}
+#container .world .wallpaper .mushroom.appear{
+    animation: mushroomAppear 0.5s linear;
+}
+
+#container .world p .indicator{
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    left: -3vw;
+    background:url(../sprites/base/indicator.png);
+    background-size: 100%;
+    display: none;
+}   
+
+#container .world p:hover .indicator{
+    display:inline-block;
+}
+
+#container .world p.disable{
+    color: #191919;
+    opacity: 0.3;
+    text-shadow: #333 0.1vw 0.1vw;
+    cursor: default !important;
+}
+
+#container .world p.disable .indicator{
+    display: none;
+}
+
+/*SIGN*/
+#container .world .menu-screen{
+    margin-top:7vw;
+    position: relative;
+}
+
+#container .world .menu-screen h2.sign{
+    height:18vw;
+    background: url(../sprites/menu/letrero.png);
+    background-size: 100% 100%;
+    padding:0 2.5vw;
+    box-sizing: border-box;
+    line-height: 0.8;
+    text-shadow: black 0.2vw 0.8vw;
+    text-align: left;
+    display: inline-block;
+    transform: translateY(0);
+}
+
+#container .world .menu-screen h2.sign span{
+    font-family: 'titles';
+    font-size: 7.5vw;
+    color: var(--title-color);
+    display: block;
+    margin-bottom: 3vw;
+}
+
+#container .world .menu-screen h2.sign span + span{
+    margin-bottom: 0;
+}
+
+#container .world .menu-screen h2.sign.change{
+    animation: changeTitleScreen 2s linear;
+}

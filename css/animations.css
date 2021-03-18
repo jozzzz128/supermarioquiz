@@ -1,0 +1,45 @@
+@keyframes closeLoadScreen{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes changeTitleScreen{
+    0%{
+        opacity:0;
+        transform: translateY(10vw);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes moveBlock{
+    0%{
+        transform: translateY(0vw);
+    }
+    50%{
+        transform: translateY(-0.8vw);
+    }
+    100%{
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes mushroomAppear{
+    0%{
+        transform: translateY(3vw);
+    }
+    100%{
+        transform: translateY(0vw);
+    }
+}
+

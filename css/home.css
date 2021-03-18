@@ -1,0 +1,98 @@
+#container .world.day{
+    background: var(--day-color);
+}
+
+#container .world.day .wallpaper{
+    background: url(../sprites/menu/wallpaper.png);
+}
+
+#container .world.day .wallpaper .goomba{
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    bottom: 0;
+    left: 54.5vw;
+    background: url(../sprites/menu/goomba.webp);
+    background-size:100% 100%;
+    transition: 7.5s;
+    transition-timing-function: linear;
+    transform: translateX(60vw);
+}
+
+#container .world.day .wallpaper .goomba.moveLeft{
+    transform: translateX(0vw);
+}
+
+#container .world.day .wallpaper .goomba.escape{
+    transform: translateX(61vw);
+    transition: 3.3s;
+    transition-timing-function: linear;
+}
+
+#container .world.day .menu-screen ul{
+    margin: 0 auto;
+    margin-top: 2.5vw;
+    width: 30vw;
+}
+
+#container .world.day .menu-screen ul li{
+    line-height: 3vw;
+    text-align: center;
+    list-style: none;
+}
+
+#container .world.day .menu-screen ul li p{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#container .world.day #blocks1{
+    bottom: 29vw;
+    left: 81vw;
+}
+
+#container .world.day #blocks2{
+    bottom: 12vw;
+    left: 75vw;
+}
+
+#container .world.day .floor{
+    background: url(../sprites/menu/floor.png);
+}
+
+
+/* Target mobile devices*/
+@media only screen and (max-device-width: 480px) {
+    #container .world.day .menu-screen .sign{
+        padding:1vw 2.5vw;
+        line-height: 1;
+    }
+    #container .world.day .menu-screen .sign span{
+        margin-bottom: 1.5vw;
+    }
+}
+
+/* Recent Webkit-specific media query to target the iPhone 4's high-resolution Retina display*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #container .world.day .menu-screen .sign{
+        padding:1vw 2.5vw;
+        line-height: 1;
+    }
+    #container .world.day .menu-screen .sign span{
+        margin-bottom: 1.5vw;
+    }
+}
+
+/* should technically achieve a similar result to the above query,
+ targeting based on screen resolution (the iPhone 4 has 326 ppi/dpi)*/
+@media only screen and (min-resolution: 300dpi) {
+    #container .world.day .menu-screen .sign{
+        padding:1vw 2.5vw;
+        line-height: 1;
+    }
+    #container .world.day .menu-screen .sign span{
+        margin-bottom: 1.5vw;
+    }
+}

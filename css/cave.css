@@ -1,0 +1,36 @@
+#container .world.cave .wallpaper{
+    background: #000;
+}
+
+#container .world.cave .roof{
+    width:100%;
+    height:2.8vw;
+    position: absolute;
+    top: 5vw;
+    background: url("../sprites/cave/ladrillo.png");
+    background-position:-1vw 0 !important;
+    background-size:3vw !important;
+}
+
+#container .world.cave .roof .pipe{
+    position: absolute;
+    left: -1vw;
+    top: 2.8vw;
+}
+
+#container .world.cave .floor{
+    background: url(../sprites/cave/block.png);
+}
+
+#container .world.cave .menu-screen{
+    margin-top:12vw;
+}
+
+#container .world.cave .menu-screen h2.sign{
+    height: auto;
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+    max-width: 50%;
+    line-height: 1.5;
+}   
