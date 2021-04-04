@@ -18,6 +18,8 @@ window.addEventListener("load",()=>{
 function generateLoadScreen(config = {}){
     //Stop BG music
     music.tempPauseMusic();
+    //Update counter
+    util.counter.update();
 
     const load = document.createElement("div");
           load.classList.add("load-screen");
@@ -55,7 +57,7 @@ function generateLoadScreen(config = {}){
             <h2 class="title">
                 <span>${quiz.title}</span>
             </h2>
-            <p class="sign">question ${config.question}-${quiz.questions.length}</p>
+            <p class="sign">question ${config.question}-${qHistory.limit}</p>
             <div class="life">
                 <span class="thumb"></span>
                 <span class="icon-cross"></span>
@@ -65,11 +67,8 @@ function generateLoadScreen(config = {}){
     }
     container.append(load);
 
-    if(config.question) setTimeout(()=>{
-        generateQuestionScreen({
-            text: quiz.questions[config.question-1].text,
-            ans: quiz.questions[config.question-1].ans
-        });
+    if(config.question) setTimeout(() => {
+        generateQuestionScreen(util.getRandomQuestion());
         load.remove();
     },3000);
 }
@@ -160,6 +159,10 @@ function generateMenuScreen(){
                 {
                     animation: util.animate.block.hit,
                     config: {
+                        mushroom: {
+                            x: 78,
+                            y: 15
+                        },
                         element: document.querySelector('#tohit')
                     }
                 },
@@ -210,7 +213,7 @@ function generateMenuScreen(){
             ]);
             //Generate loadScreen
             generateLoadScreen({
-                question: 1
+                question: qHistory.count + 1
             });
         });
 
@@ -227,7 +230,7 @@ function generateMenuScreen(){
     util.animate.goomba.move(world.querySelector(".wallpaper .goomba"),7.5);
 }
 
-function generateQuestionScreen(config = { text: '', ans: [ {res: '', correct: true} ] }){
+async function generateQuestionScreen(config){
     //Destroy prev level
     const oldWorld = document.querySelector("#container .world");
     if(oldWorld) oldWorld.remove();
@@ -243,43 +246,28 @@ function generateQuestionScreen(config = { text: '', ans: [ {res: '', correct: t
         </div>
         <div class="menu-screen">
             <h2 class="sign">
+                <ul id="blocks1" class="blocks">
+                    <li class="coin"></li>
+                    <li class="coin"></li>
+                </ul>
                 ${config.text}
+                <ul id="blocks2" class="blocks">
+                    <li class="coin"></li>
+                    <li class="coin"></li>
+                </ul>
             </h2>
             <ul></ul>
         </div>
         <div class="floor"></div>
         <div class="wallpaper">
             <div id="mario" class="big right"></div>
-
-            <ul id="blocks1" class="blocks">
-                <li class="coin"></li>
-                <li class="coin"></li>
-                <li class="coin"></li>
-                <li class="coin"></li>
-            </ul>
-            <ul id="blocks2" class="blocks">
-                <li class="coin"></li>
-                <li class="coin"></li>
-                <li class="coin"></li>
-                <li class="coin"></li>
-            </ul>
-
-            <div class="pipe">
-                <p class="answer"><span class="indicator"></span>${config.ans[0].res}</p>
-                <div class="cover"></div>
-            </div>
-            <div class="pipe">
-                <p class="answer"><span class="indicator"></span>${config.ans[1].res}</p>
-                <div class="cover"></div>
-            </div>
-            <div class="pipe">
-                <p class="answer"><span class="indicator"></span>${config.ans[2].res}</p>
-                <div class="cover"></div>
-            </div>
         </div>
         `;
-
+    //Generate bg music button
     world.querySelector(".floor").append(util.genBgMusicButton());
+    //Generate answer pipes
+    config.ans.forEach((ans,i) => { world.querySelector(".wallpaper").append(util.genAnswerPipe({text: config.text, ans: ans, index: i})) });
+    //Generate World level
     container.append(world);
 
     music.change({
@@ -287,7 +275,7 @@ function generateQuestionScreen(config = { text: '', ans: [ {res: '', correct: t
         bgmusic: true,
     });
 
-    util.animationSequence([
+    await util.animationSequence([
         {
             animation: util.animate.mario.appearPipe,
             config: {
@@ -301,4 +289,7 @@ function generateQuestionScreen(config = { text: '', ans: [ {res: '', correct: t
             }
         }
     ]);
+
+    //Allow all answers
+    util.answers.enable();
 }

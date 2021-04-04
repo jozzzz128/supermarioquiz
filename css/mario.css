@@ -65,6 +65,14 @@
 #mario.big.left.grow{
     background: url(../sprites/mario/animation/grow-left.gif);
 }
+#mario.right.shrink{
+    height:7vw;
+    background: url(../sprites/mario/animation/shrink-right.gif);
+}
+#mario.left.shrink{
+    height:7vw;
+    background: url(../sprites/mario/animation/shrink-left.gif);
+}
 
 /*Cave*/
 #container .world.cave #mario{

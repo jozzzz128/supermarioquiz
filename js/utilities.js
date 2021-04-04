@@ -79,6 +79,7 @@ const music = {
 
 /*UTILITIES*/
 const util = {
+    answerFlag: false,
     randomCounter: 0,
     genRandomString: () => {
         util.randomCounter++;
@@ -202,21 +203,97 @@ const util = {
         });
         return bgmusic;
     },
+    genRandomInt: max => {
+        return Math.floor(Math.random() * Math.floor(max));
+    },
+    getRandomQuestion: () => {
+        if(qHistory.count == qHistory.limit) return false;
+        //If randomize on
+        let question;
+        if(quiz.randomize){
+            const index = util.genRandomInt(quiz.questions.length);
+            question = Object.assign({}, quiz.questions[index]);
+            question.ans = util.randomiceArray(question.ans).map(ans => ans.res);
+        }
+        else{
+            question = Object.assign({}, quiz.questions[qHistory.count]);
+            question.ans = question.ans.map(ans => ans.res);
+        }
+        return question;
+    },
+    selectAnswer: config => {
+        const index = quiz.questions.findIndex(question => question.text == config.text);
+        const selected = quiz.questions.splice(index, 1)[0];
+        const correctIndex = selected.ans.map((ans, i) => { if(ans.correct) return i; }).filter(ans => !isNaN(ans))[0];
+        selected.ans = selected.ans.filter(ans => ans.res == config.ans)[0];
+
+        qHistory.questions.push(selected);
+        qHistory.count++;
+        
+        if(selected.ans.correct) return true;
+        return correctIndex;
+    },
+    randomiceArray: (array = []) => {
+        return array.sort( () => .5 - Math.random() );
+    },
+    genAnswerPipe: config => {
+        const pipe = document.createElement("div");
+        pipe.classList.add("pipe");
+        pipe.innerHTML = `
+            <p class="answer disable"><span class="indicator"></span>${config.ans}</p>
+            <div class="piranha"></div>
+            <ul class="blocks">
+                <li class="hidden"></li>
+            </ul>
+            <div class="cover"></div>
+        `;
+        const answer = pipe.querySelector(".answer");
+        util.toggleClick(answer, async () => { if(util.answerFlag) {
+            //Block all answers
+            util.answers.block();
+            //Animate answer
+            await util.animate.sequence.jumpToPipe(config);
+        }});
+        return pipe;
+    },
+    getPipeCoords: pipe => {
+        const coords = pipe.getBoundingClientRect();
+        return {
+            x: util.pxToVw(coords.left) - 6,
+            y: -8
+        };
+    },
+    answers: {
+        block: () => {
+            util.answerFlag = false;
+            container.querySelectorAll(".world .wallpaper .pipe").forEach(pipe => { pipe.querySelector("p").classList.add("disable") });
+        },
+        enable: () => {
+            util.answerFlag = true;
+            container.querySelectorAll(".world .wallpaper .pipe").forEach(pipe => { pipe.querySelector("p").classList.remove("disable") });
+        }
+    },
     counter: {
         generate: container => {
             const counter = document.createElement("ul");
             counter.classList.add("counter-container");
             counter.classList.add("disable");
             counter.innerHTML = `
-                <li>Mario 000000</li>
+                <li>Mario <span class="points">000000</span></li>
                 <li><span class="money"></span><span class="icon-cross"></span>00</li>
-                <li>Question 1-${quiz.questions.length}</li>
+                <li>Question <span class="counter">1</span>-${qHistory.limit}</li>
                 <li>Time <span class="icon-infinite"></span></li>  
             `;
             container.append(counter);
         },
         update: () => {
-
+            //Update Question Counter
+            container.querySelector(".counter-container li .counter").innerHTML = qHistory.count + 1;
+            //Update Points Counter
+            let points = qHistory.points.toString();
+            let zeros = ''; for (let i = 0; i < (6 - points.length); i++) { zeros += '0'; }
+            points = zeros + points;
+            container.querySelector(".counter-container li .points").innerHTML = points;
         },
         display: () => {
             const counter = document.querySelector("#container .counter-container");
@@ -243,11 +320,11 @@ const util = {
                 music.effects.jump();
 
                 const translate = util.getTranslateProp(mario);
-                const translateX = config.x/6;
-                const translateY = config.y/3;
+                let translateX = config.x/6;
+                let translateY = config.y/3;
 
                 //Reverse Jump
-                if(config.x && config.x - translate.x < 0){
+                if(config.x && config.x - translate.x < 0 && translate.y != config.y){
                     util.genAnimation({
                         element: mario,
                         animation: `
@@ -276,37 +353,121 @@ const util = {
                         settings: '0.5s linear'
                     });
                 }
-                //Normal Jump
-                else if(config.x){
+                if(config.x && config.x - translate.x < 0 && translate.y == config.y){
+                    console.log("correct");
+                    //39 - 15 => /6 
+                    translateX = (config.x - translate.x) / 6;
+                    const animationer = `
+                    0%{
+                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
+                    }
+                    10%{
+                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
+                    }
+                    30%{
+                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
+                    }
+                    50%{
+                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
+                    }
+                    70%{
+                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
+                    }
+                    100%{
+                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
+                    }
+                    `;
                     util.genAnimation({
                         element: mario,
-                        animation: `
-                        0%{
-                            transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
-                        }
-                        10%{
-                            transform: translateX(${translateX}vw) translateY(${translateY*2}vw);
-                        }
-                        20%{
-                            transform: translateX(${translateX*2}vw) translateY(${translateY*3}vw);
-                        }
-                        40%{
-                            transform: translateX(${translateX*3}vw) translateY(${translateY*4}vw);
-                        }
-                        60%{
-                            transform: translateX(${translateX*4}vw) translateY(${translateY*4.5}vw);
-                        }
-                        80%{
-                            transform: translateX(${translateX*5}vw) translateY(${translateY*4.5}vw);
-                        }
-                        100%{
-                            transform: translateX(${config.x}vw) translateY(${config.y}vw);
-                        }
-                    `,
+                        animation: animationer,
+                        settings: '0.5s linear'
+                    });
+                }
+                //Normal Jump
+                else if(config.x && translate.y != config.y){
+                    //39 - 15 => /6 
+                    translateX = (config.x - translate.x) / 6;
+                    const animationer = `
+                    0%{
+                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
+                    }
+                    10%{
+                        transform: translateX(${translate.x + translateX}vw) translateY(${translateY*2}vw);
+                    }
+                    20%{
+                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
+                    }
+                    40%{
+                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
+                    }
+                    60%{
+                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
+                    }
+                    80%{
+                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
+                    }
+                    100%{
+                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
+                    }
+                `;
+                    util.genAnimation({
+                        element: mario,
+                        animation: animationer,
+                        settings: '0.5s linear'
+                    });
+                }
+                else if(config.x && translate.y == config.y){
+                    //39 - 15 => /6 
+                    translateX = (config.x - translate.x) / 6;
+                    const animationer = `
+                    0%{
+                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
+                    }
+                    10%{
+                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
+                    }
+                    30%{
+                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
+                    }
+                    50%{
+                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
+                    }
+                    70%{
+                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
+                    }
+                    100%{
+                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
+                    }
+                    `;
+                    util.genAnimation({
+                        element: mario,
+                        animation: animationer,
                         settings: '0.5s linear'
                     });
                 }
                 //Up jump
+                else if(config.interruption){
+                    util.genAnimation({
+                        element: mario,
+                        animation: `
+                        0%{
+                            transform: translateX(${translate.x}vw) translateY(${translate.y});
+                        }
+                        80%{
+                            transform: translateX(${translate.x}vw) translateY(${translateY*3}vw);
+                        }
+                        100%{
+                            transform: translateX(${translate.x}vw) translateY(${config.y}vw);
+                        }
+                    `,
+                        settings: '0.4s linear'
+                    });
+                    await util.asyncSetTimeOut(()=>{
+                        mario.style.transform = `translateX(${translate.x}vw) translateY(${config.y}vw)`;
+                    },400);
+                    await util.delay(0.3);
+                    await config.interruption.animation(config.interruption.config);
+                }
                 else {
                     util.genAnimation({
                         element: mario,
@@ -374,7 +535,7 @@ const util = {
                 mario.classList.add("jump");
 
                 const translate = util.getTranslateProp(mario);
-                mario.style.transform = `translateX(${config.x}vw) translateY(0vw)`;
+                mario.style.transform = `translateX(${config.x}vw) translateY(${(config.y) ? config.y : 0}vw)`;
 
                 util.genAnimation({
                     element: mario,
@@ -383,7 +544,7 @@ const util = {
                             transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
                         }
                         100%{
-                            transform: translateX(${config.x}vw) translateY(0vw);
+                            transform: translateX(${config.x}vw) translateY(${(config.y) ? config.y : 0}vw);
                         }
                     `,
                     settings: `${(config.time) ? config.time : '0.5'}s linear`
@@ -404,6 +565,14 @@ const util = {
                 music.effects.powerUp();
                 await util.asyncSetTimeOut(()=>{ 
                     mario.classList.remove("grow"); 
+                },1000);
+            },
+            shrink: async () => {
+                mario.classList.remove("big");
+                mario.classList.add("shrink");
+                music.effects.pipe();
+                await util.asyncSetTimeOut(()=>{ 
+                    mario.classList.remove("shrink"); 
                 },1000);
             },
             enterPipe: async (config = {delay: 0}) => {
@@ -482,8 +651,8 @@ const util = {
             hit: async config => {
                 config.element.classList.add("hit");
                 util.animate.mushroom.generate({
-                    x: 78,
-                    y: 15,
+                    x: config.mushroom.x,
+                    y: config.mushroom.y,
                     container: document.querySelector("#container .world .wallpaper")
                 });
                 await util.asyncSetTimeOut(()=>{
@@ -551,6 +720,194 @@ const util = {
                         mushroom.style.animation = "";  
                     },(config.time) ? config.time*1000 : 500);
                 }, config.delay*1000);
+            }
+        },
+        sequence: {
+            jumpToPipe: async config => {
+                //Jump to pipe animation
+                const pipes = container.querySelectorAll(".world .wallpaper .pipe");
+                const secuence = [];
+                if(config.skip === undefined){
+                    for (let i = 0; i <= config.index; i++){
+                        const coords = util.getPipeCoords(pipes[i].querySelector('.cover'));
+                        secuence.push({
+                            animation: util.animate.mario.jump,
+                            config: {
+                                x: coords.x,
+                                y: coords.y
+                            }
+                        });
+                    }
+                }
+                else if(config.skip > config.index){
+                    for (let i = config.skip-1; i >= 0; i--){
+                        if(i >= config.index){
+                            const coords = util.getPipeCoords(pipes[i].querySelector('.cover'));
+                            secuence.push({
+                                animation: util.animate.mario.jump,
+                                config: {
+                                    x: coords.x,
+                                    y: coords.y
+                                }
+                            });
+                        }
+                    }
+                    secuence.push({
+                        animation: util.animate.mario.turn
+                    });
+                }
+                //Normal
+                else{
+                    for (let i = 0; i <= config.index; i++){
+                        if(i > config.skip){
+                            const coords = util.getPipeCoords(pipes[i].querySelector('.cover'));
+                            secuence.push({
+                                animation: util.animate.mario.jump,
+                                config: {
+                                    x: coords.x,
+                                    y: coords.y
+                                }
+                            });
+                        }
+                    }
+                }
+                
+                
+                /*for (let i = 0; i <= config.index; i++){
+                    //0 < undefined && 0 > undefined == false; 
+                    if(config.skip === undefined || i > config.skip){
+                        const coords = util.getPipeCoords(pipes[i].querySelector('.cover'));
+                        secuence.push({
+                            animation: util.animate.mario.jump,
+                            config: {
+                                x: coords.x,
+                                y: coords.y
+                            }
+                        });
+                    } else if(config.skip > config.index && i < config.index){
+                        console.log(`i: ${config.index - i}`);
+                        const coords = util.getPipeCoords(pipes[config.index - i].querySelector('.cover'));
+                        secuence.push({
+                            animation: util.animate.mario.jump,
+                            config: {
+                                x: coords.x,
+                                y: coords.y
+                            }
+                        });
+                    }
+                }*/
+                await util.animationSequence(secuence, (config.delay) ? {interval: 0.2, delay: config.delay} : {interval: 0.2});
+                if(config.skip === undefined){
+                    //Check answer
+                    const correct = util.selectAnswer({
+                        text: config.text,
+                        ans: config.ans
+                    });
+
+                    //Animate answer
+                    if(correct === true) await util.animationSequence([
+                        {
+                            animation: util.animate.mario.enterPipe
+                        }
+                    ], {delay: 0.2});
+
+                    else await util.animate.sequence.receiveDamage({
+                        index: config.index,
+                        correct: correct,
+                        pipe: pipes[config.index],
+                        correctPipe: pipes[correct]
+                    });
+                    //Load next level
+                    /*await util.delay(0.1);
+                    generateLoadScreen({
+                        question: qHistory.count + 1
+                    });*/
+                } else console.log(config.skip);
+            },
+            receiveDamage: async config => {
+                const coords = util.getPipeCoords(config.correctPipe.querySelector('.cover'));
+                //Animate piranha appear
+                config.pipe.querySelector(".piranha").classList.add("show");
+                //Animate mario shrink
+                await util.animationSequence([
+                    {
+                        animation: util.animate.mario.shrink
+                    }
+                ], {delay: 0.7});
+                //Animate turn if correct answer is on left
+                if(config.correct < config.index) await util.animationSequence([
+                    {
+                        animation: util.animate.mario.turn
+                    }
+                ]);
+                //Animate jump to correct pipe
+                await util.animate.sequence.jumpToPipe({
+                    index: config.correct,
+                    skip: config.index,
+                    delay: 0.2
+                });
+                //Animate enter to correct pipe
+                await util.animationSequence([
+                    {
+                        animation: util.animate.mario.jump,
+                        config: {
+                            y: -11.3
+                        } 
+                    },
+                    {
+                        animation: util.animate.block.hit,
+                        config: {
+                            mushroom: {
+                                x: coords.x + 9.5,
+                                y: 22.9
+                            },
+                            element: config.correctPipe.querySelector(".blocks li")
+                        }
+                    },
+                    {
+                        animation: util.animate.mario.walk,
+                        config: {
+                            x: coords.x + 3
+                        }
+                    },
+                    {
+                        animation: util.animate.mushroom.move,
+                        config: {
+                            x: 3,
+                            delay: 0.5
+                        }
+                    },
+                    {
+                        animation: util.animate.mario.jump,
+                        config: {
+                            y: -23,
+                            interruption: {
+                                animation: util.animate.mario.grow
+                            }
+                        } 
+                    },
+                    {
+                        animation: util.animate.mario.fall,
+                        config: {
+                            x: coords.x + 3,
+                            y: coords.y
+                        }
+                    },
+                    {
+                        animation: util.animate.mario.turn
+                    },
+                    {
+                        animation: util.animate.mario.walk,
+                        config: {
+                            x: coords.x,
+                            time: 0.2
+                        }
+                    },
+                    {
+                        animation: util.animate.mario.enterPipe
+                    }
+                ], {delay: 0.2});
+                console.log(coords.y);
             }
         }
     } 

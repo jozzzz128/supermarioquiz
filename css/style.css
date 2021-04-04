@@ -229,6 +229,10 @@ body{
     animation: moveBlock 0.3s linear;
 }
 
+#container .world .wallpaper ul.blocks li.coin{
+    background: url(../sprites/base/coin.gif);
+}
+
 #container .world .wallpaper ul.blocks li.brick{
     background: url(../sprites/menu/ladrillo-normal.png);
 }
@@ -238,6 +242,10 @@ body{
 }
 
 #container .world .wallpaper ul.blocks li.hit.question{
+    background: url(../sprites/menu/ladrillo-golpeado.png);
+}
+
+#container .world .wallpaper ul.blocks li.hit.hidden{
     background: url(../sprites/menu/ladrillo-golpeado.png);
 }
 
@@ -268,6 +276,32 @@ body{
     top: -8vw;
     text-align: center;
     cursor: pointer;
+}
+
+#container .world .pipe .blocks{
+    bottom: calc(100% + 12vw);
+}
+
+#container .world .pipe .piranha{
+    width: 4.2vw;
+    height: 6vw;
+    position: absolute;
+    bottom: 0;
+    background:url(../sprites/cave/piranha.webp);
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#container .world .pipe .piranha.show{
+    animation: piranhaAppear 1.4s linear;
+}
+
+#container .world .pipe.blocked .answer{
+    cursor: default;
+}
+
+#container .world .pipe.blocked .answer:hover .indicator{
+    display:none;
 }
 
 #container .world .wallpaper .mushroom{
@@ -325,6 +359,7 @@ body{
     text-align: left;
     display: inline-block;
     transform: translateY(0);
+    position: relative;
 }
 
 #container .world .menu-screen h2.sign span{

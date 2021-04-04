@@ -43,3 +43,17 @@
     }
 }
 
+@keyframes piranhaAppear{
+    0%{
+        transform: translateY(0vw);
+    }
+    30%{
+        transform: translateY(-8vw);
+    }
+    70%{
+        transform: translateY(-8vw);
+    }
+    100%{
+        transform: translateY(0vw);
+    }
+}
