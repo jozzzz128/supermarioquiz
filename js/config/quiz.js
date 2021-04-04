@@ -1,8 +1,8 @@
 const quiz = {
     prefix: "Grupo 2:",
     title: "Reumatología y traumatología",
-    dataBanc: 1,
-    randomize: false,
+    dataBanc: 0.8,
+    randomize: true,
     questions: [
         {
             text: "Según su mecanismo de acción ¿A cuál de estos grupos pertenece el Alopurinol?",

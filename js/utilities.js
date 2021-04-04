@@ -740,32 +740,9 @@ const util = {
                         }
                     }
                 }
-                
-                
-                /*for (let i = 0; i <= config.index; i++){
-                    //0 < undefined && 0 > undefined == false; 
-                    if(config.skip === undefined || i > config.skip){
-                        const coords = util.getPipeCoords(pipes[i].querySelector('.cover'));
-                        secuence.push({
-                            animation: util.animate.mario.jump,
-                            config: {
-                                x: coords.x,
-                                y: coords.y
-                            }
-                        });
-                    } else if(config.skip > config.index && i < config.index){
-                        console.log(`i: ${config.index - i}`);
-                        const coords = util.getPipeCoords(pipes[config.index - i].querySelector('.cover'));
-                        secuence.push({
-                            animation: util.animate.mario.jump,
-                            config: {
-                                x: coords.x,
-                                y: coords.y
-                            }
-                        });
-                    }
-                }*/
                 await util.animationSequence(secuence, (config.delay) ? {interval: 0.2, delay: config.delay} : {interval: 0.2});
+
+                //Evaluate answer
                 if(config.skip === undefined){
                     //Check answer
                     const correct = util.selectAnswer({
@@ -787,10 +764,10 @@ const util = {
                         correctPipe: pipes[correct]
                     });
                     //Load next level
-                    /*await util.delay(0.1);
+                    await util.delay(0.1);
                     generateLoadScreen({
                         question: qHistory.count + 1
-                    });*/
+                    });
                 } else console.log(config.skip);
             },
             receiveDamage: async config => {
