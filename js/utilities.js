@@ -353,99 +353,67 @@ const util = {
                         settings: '0.5s linear'
                     });
                 }
-                if(config.x && config.x - translate.x < 0 && translate.y == config.y){
-                    console.log("correct");
+                //Same height jump (Normal && reverse)
+                if(translate.y == config.y){
                     //39 - 15 => /6 
                     translateX = (config.x - translate.x) / 6;
-                    const animationer = `
-                    0%{
-                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
-                    }
-                    10%{
-                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
-                    }
-                    30%{
-                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
-                    }
-                    50%{
-                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
-                    }
-                    70%{
-                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
-                    }
-                    100%{
-                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
-                    }
-                    `;
                     util.genAnimation({
                         element: mario,
-                        animation: animationer,
+                        animation: `
+                        0%{
+                            transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
+                        }
+                        10%{
+                            transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
+                        }
+                        30%{
+                            transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
+                        }
+                        50%{
+                            transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
+                        }
+                        70%{
+                            transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
+                        }
+                        100%{
+                            transform: translateX(${config.x}vw) translateY(${config.y}vw);
+                        }
+                        `,
                         settings: '0.5s linear'
                     });
                 }
                 //Normal Jump
-                else if(config.x && translate.y != config.y){
+                else if(config.x){
                     //39 - 15 => /6 
                     translateX = (config.x - translate.x) / 6;
-                    const animationer = `
-                    0%{
-                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
-                    }
-                    10%{
-                        transform: translateX(${translate.x + translateX}vw) translateY(${translateY*2}vw);
-                    }
-                    20%{
-                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
-                    }
-                    40%{
-                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
-                    }
-                    60%{
-                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
-                    }
-                    80%{
-                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
-                    }
-                    100%{
-                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
-                    }
-                `;
                     util.genAnimation({
                         element: mario,
-                        animation: animationer,
+                        animation: `
+                        0%{
+                            transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
+                        }
+                        10%{
+                            transform: translateX(${translate.x + translateX}vw) translateY(${translateY*2}vw);
+                        }
+                        20%{
+                            transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
+                        }
+                        40%{
+                            transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
+                        }
+                        60%{
+                            transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
+                        }
+                        80%{
+                            transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
+                        }
+                        100%{
+                            transform: translateX(${config.x}vw) translateY(${config.y}vw);
+                        }`,
                         settings: '0.5s linear'
                     });
                 }
-                else if(config.x && translate.y == config.y){
-                    //39 - 15 => /6 
-                    translateX = (config.x - translate.x) / 6;
-                    const animationer = `
-                    0%{
-                        transform: translateX(${translate.x}vw) translateY(${translate.y}vw);
-                    }
-                    10%{
-                        transform: translateX(${translate.x + translateX*2}vw) translateY(${translateY*3}vw);
-                    }
-                    30%{
-                        transform: translateX(${translate.x + translateX*3}vw) translateY(${translateY*4}vw);
-                    }
-                    50%{
-                        transform: translateX(${translate.x + translateX*4}vw) translateY(${translateY*4.5}vw);
-                    }
-                    70%{
-                        transform: translateX(${translate.x + translateX*5}vw) translateY(${translateY*4.5}vw);
-                    }
-                    100%{
-                        transform: translateX(${config.x}vw) translateY(${config.y}vw);
-                    }
-                    `;
-                    util.genAnimation({
-                        element: mario,
-                        animation: animationer,
-                        settings: '0.5s linear'
-                    });
-                }
-                //Up jump
+                //Up jump with interruption
                 else if(config.interruption){
                     util.genAnimation({
                         element: mario,
@@ -468,6 +436,7 @@ const util = {
                     await util.delay(0.3);
                     await config.interruption.animation(config.interruption.config);
                 }
+                //Up jump
                 else {
                     util.genAnimation({
                         element: mario,
