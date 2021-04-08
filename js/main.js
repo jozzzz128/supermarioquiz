@@ -15,11 +15,13 @@ window.addEventListener("load",()=>{
 
 });
 
-function generateLoadScreen(config = {}){
+async function generateLoadScreen(config = {}){
     //Stop BG music
     music.tempPauseMusic();
+    //Random Question Get
+    const randomQ = util.getRandomQuestion();
     //Update counter
-    util.counter.update();
+    if(!randomQ) util.counter.update();
 
     const load = document.createElement("div");
           load.classList.add("load-screen");
@@ -46,7 +48,7 @@ function generateLoadScreen(config = {}){
                 <span>super mario quiz</span>
                 ${quiz.prefix} ${quiz.title}
             </h2>
-            <p>questions: ${quiz.questions.length}</p>
+            <p>questions: ${qHistory.limit}</p>
             <p class="sign">click to continue...</p>
         </div>`;
     }
@@ -57,7 +59,7 @@ function generateLoadScreen(config = {}){
             <h2 class="title">
                 <span>${quiz.title}</span>
             </h2>
-            <p class="sign">question ${config.question}-${qHistory.limit}</p>
+            <p class="sign">${randomQ ? `question ${config.question}-${qHistory.limit}` : 'loading...'}</p>
             <div class="life">
                 <span class="thumb"></span>
                 <span class="icon-cross"></span>
@@ -68,9 +70,16 @@ function generateLoadScreen(config = {}){
     container.append(load);
 
     if(config.question) setTimeout(() => {
-        generateQuestionScreen(util.getRandomQuestion());
+        generateQuestionScreen(randomQ);
         load.remove();
     },3000);
+    /*else {
+        const info = await axios.post(quiz.sendData.url);
+        generateQuestionScreen({
+
+        });
+        load.remove();
+    }*/
 }
 
 function generateMenuScreen(){
@@ -245,16 +254,18 @@ async function generateQuestionScreen(config){
             </div>
         </div>
         <div class="menu-screen">
-            <h2 class="sign">
+            <h2 class="sign">        
+                ${config ? `
                 <ul id="blocks1" class="blocks">
                     <li class="coin"></li>
                     <li class="coin"></li>
                 </ul>
-                ${config.text}
+                <p class="text">${config.text}</p>
                 <ul id="blocks2" class="blocks">
                     <li class="coin"></li>
                     <li class="coin"></li>
                 </ul>
+                ` : '<p class="text"></p>'}
             </h2>
             <ul></ul>
         </div>
@@ -264,18 +275,18 @@ async function generateQuestionScreen(config){
         </div>
         `;
     //Generate bg music button
-    world.querySelector(".floor").append(util.genBgMusicButton());
+    if(config) world.querySelector(".floor").append(util.genBgMusicButton());
     //Generate answer pipes
-    config.ans.forEach((ans,i) => { world.querySelector(".wallpaper").append(util.genAnswerPipe({text: config.text, ans: ans, index: i})) });
+    if(config) config.ans.forEach((ans,i) => { world.querySelector(".wallpaper").append(util.genAnswerPipe({text: config.text, ans: ans, index: i})) });
     //Generate World level
     container.append(world);
 
-    music.change({
+    if(config) music.change({
         url: "soundtrack/SuperMarioBrosUndergroundTheme.mp3",
         bgmusic: true,
     });
 
-    await util.animationSequence([
+    const animation = [
         {
             animation: util.animate.mario.appearPipe,
             config: {
@@ -288,8 +299,29 @@ async function generateQuestionScreen(config){
                 x: 0
             }
         }
-    ]);
+    ];
+
+    //If result screen
+    if(!config){
+        animation.push({
+            animation: util.animate.mario.walk,
+            config: {
+                x: 38.5,
+                time: 2
+            }
+        });
+    }
+
+    await util.animationSequence(animation);
 
     //Allow all answers
-    util.answers.enable();
+    if(config) util.answers.enable();
+    else{
+        const results = util.answers.calcResults();
+        //Sound Effect
+        if(results.approve) music.effects.clear();
+        else music.effects.gameover();
+        //Show message
+        world.querySelector(".menu-screen .sign .text").innerHTML = results.message;
+    }
 }

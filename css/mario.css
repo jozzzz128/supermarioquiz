@@ -5,31 +5,31 @@
     left:32.3vw;
     position: absolute;
     transform: translateX(0) translateY(0);
-    background: url(../sprites/mario/shrink/stay-right.png);
+    background: var(--mario-stay-right);
     background-size: auto 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
 
 #mario.left{
-    background: url(../sprites/mario/shrink/stay-left.png);
+    background: var(--mario-stay-left);
 }
 #mario.right{
-    background: url(../sprites/mario/shrink/stay-right.png);
+    background: var(--mario-stay-right);
 }
 
 #mario.left.jump{
-    background: url(../sprites/mario/shrink/jump-left.png);
+    background: var(--mario-jump-left);
 }
 #mario.right.jump{
-    background: url(../sprites/mario/shrink/jump-right.png);
+    background: var(--mario-jump-right);
 }
 
 #mario.left.walk{
-    background: url(../sprites/mario/shrink/walk-left.gif);
+    background: var(--mario-walk-left);
 }
 #mario.right.walk{
-    background: url(../sprites/mario/shrink/walk-right.gif);
+    background: var(--mario-walk-right);
 }
 
 /*GrOw*/
@@ -38,40 +38,40 @@
 }
 
 #mario.big.left{
-    background: url(../sprites/mario/grow/stay-left.png);
+    background: var(--mario-stay-left-big);
 }
 #mario.big.right{
-    background: url(../sprites/mario/grow/stay-right.png);
+    background: var(--mario-stay-right-big);
 }
 
 #mario.big.left.jump{
-    background: url(../sprites/mario/grow/jump-left.png);
+    background: var(--mario-jump-left-big);
 }
 #mario.big.right.jump{
-    background: url(../sprites/mario/grow/jump-right.png);
+    background: var(--mario-jump-right-big);
 }
 
 #mario.big.left.walk{
-    background: url(../sprites/mario/grow/walk-left.gif);
+    background: var(--mario-walk-left-big);
 }
 #mario.big.right.walk{
-    background: url(../sprites/mario/grow/walk-right.gif);
+    background: var(--mario-walk-right-big);
 }
 
 /*Animations*/
 #mario.big.right.grow{
-    background: url(../sprites/mario/animation/grow-right.gif);
+    background: var(--mario-grow-right);
 }
 #mario.big.left.grow{
-    background: url(../sprites/mario/animation/grow-left.gif);
+    background: var(--mario-grow-left);
 }
 #mario.right.shrink{
     height:7vw;
-    background: url(../sprites/mario/animation/shrink-right.gif);
+    background: var(--mario-shrink-right);
 }
 #mario.left.shrink{
     height:7vw;
-    background: url(../sprites/mario/animation/shrink-left.gif);
+    background: var(--mario-shrink-left);
 }
 
 /*Cave*/

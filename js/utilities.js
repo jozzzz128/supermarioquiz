@@ -73,7 +73,17 @@ const music = {
                 url: "soundtrack/PowerUp.mp3",
                 end: 1.4
             });
-        }
+        },
+        gameover: () => {
+            music.change({
+                url: "soundtrack/gameover.mp3"
+            });
+        },
+        clear: () => {
+            music.change({
+                url: "soundtrack/stage_clear.mp3"
+            });
+        },
     },
 };
 
@@ -271,10 +281,36 @@ const util = {
         enable: () => {
             util.answerFlag = true;
             container.querySelectorAll(".world .wallpaper .pipe").forEach(pipe => { pipe.querySelector("p").classList.remove("disable") });
+        },
+        calcResults: () => {
+            const results = {
+                correct: 0,
+                total: qHistory.limit,
+                approve: false,
+                message: ''
+            };
+            const success = (quiz.success) ? quiz.success : 0.6;
+
+            //Calc correct answers
+            qHistory.questions.forEach(question => {
+                if(question.ans.correct) results.correct++;
+            });
+            //Calc if approve 
+            if((results.correct / results.total) >= success) results.approve = true;
+            //Write message
+            if(results.approve){
+                results.message = (quiz.message && quiz.message.success) ? quiz.message.success + `\n\n${results.correct}/${results.total}` : 
+                `thank you mario! \nyour quest is over. \n\nit was a hard quest but you tried your best and succedded, \n\nwe will see you in your next quest!! \n\nscore: ${results.correct}/${results.total}`;
+            } else {
+                results.message = (quiz.message && quiz.message.failure) ? quiz.message.failure : 
+                `thank you mario! \nyour quest is over. \n\nsometimes we fail, but that's no reason to surrender, \n\nwe will see you in your next quest!! \n\nscore: ${results.correct}/${results.total}`;
+            }
+            
+            return results;
         }
     },
     counter: {
-        generate: container => {
+        generate: cont => {
             const counter = document.createElement("ul");
             counter.classList.add("counter-container");
             counter.classList.add("disable");
@@ -283,12 +319,15 @@ const util = {
                 <li><span class="money"></span><span class="icon-cross"></span>00</li>
                 <li>Question <span class="counter">1</span>-${qHistory.limit}</li>
                 <li>Time <span class="icon-infinite"></span></li>  
+                <li class="fullscreen off">fullscreen <span class="icon-fullscreen-open"></span></li>
             `;
-            container.append(counter);
+            const fullscreen = counter.querySelector('li.fullscreen');
+            util.toggleClick(fullscreen, () => { util.openFullscreen(body); });
+            cont.append(counter);
         },
         update: () => {
             //Update Question Counter
-            container.querySelector(".counter-container li .counter").innerHTML = qHistory.count + 1;
+            container.querySelector(".counter-container li .counter").innerHTML = (qHistory.count != qHistory.limit) ? qHistory.count + 1 : qHistory.count;
             //Update Points Counter
             let points = qHistory.points.toString();
             let zeros = ''; for (let i = 0; i < (6 - points.length); i++) { zeros += '0'; }
@@ -768,7 +807,7 @@ const util = {
                     generateLoadScreen({
                         question: qHistory.count + 1
                     });
-                } else console.log(config.skip);
+                } //else console.log(config.skip);
             },
             receiveDamage: async config => {
                 const coords = util.getPipeCoords(config.correctPipe.querySelector('.cover'));

@@ -1,7 +1,8 @@
 const quiz = {
     prefix: "Grupo 2:",
     title: "Reumatología y traumatología",
-    dataBanc: 0.8,
+    dataBanc: 1,
+    //success: 0.5,
     randomize: true,
     questions: [
         {
@@ -34,7 +35,15 @@ const quiz = {
                 }
             ]
         }
-    ]
+    ],
+    /*sendData: {
+        url: "./lol",
+        res: true
+    },
+    message: {
+        success: '',
+        failure: ''
+    }*/
 };
 
 const qHistory = {

@@ -170,6 +170,10 @@ body{
     background: url(../sprites/base/coin.gif);
     background-size: 100% 100%;
 }
+/*FULLSCREEN*/
+#container .counter-container li.fullscreen{
+    cursor: pointer;
+}
 
 #container .world .wallpaper{
     position: absolute;
@@ -360,6 +364,10 @@ body{
     display: inline-block;
     transform: translateY(0);
     position: relative;
+}
+
+#container .world .menu-screen h2.sign p{
+    white-space: pre-wrap;
 }
 
 #container .world .menu-screen h2.sign span{
