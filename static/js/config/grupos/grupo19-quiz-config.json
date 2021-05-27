@@ -1,0 +1,38 @@
+{
+    "prefix": "Grupo 19:",
+    "title": "Soluciones electrolíticas y sustitutos del plasma",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál es el uso principal de los electrolitos orales?",
+            "ans": [
+                {
+                    "res": "Tratar la hiperkalemia"
+                },
+                {
+                    "res": "Tratar las náusea y vómito"
+                },
+                {
+                    "res": "Tratar la deshidratación",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la cantidad de agua diaria que debe consumir una persona?",
+            "ans": [
+                {
+                    "res": "5-10 ml/kg"
+                },
+                {
+                    "res": "25-30 ml/kg",
+                    "correct": true
+                },
+                {
+                    "res": "35-50 ml/kg"
+                }
+            ]
+        }
+    ]
+}

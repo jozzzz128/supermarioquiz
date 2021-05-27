@@ -1,0 +1,143 @@
+{
+    "prefix": "Grupo 15:",
+    "title": "Oftalmología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "Efecto adverso del cloranfenicol-sulfacetamida",
+            "ans": [
+                {
+                    "res": "Mareo"
+                },
+                {
+                    "res": "Visión borrosa"
+                },
+                {
+                    "res": "Irritación local",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuántas gotitas de cloranfenicol-sulfacetamida son en secreciones muy abundantes?",
+            "ans": [
+                {
+                    "res": "2 gotas cada 4 horas",
+                    "correct": true
+                },
+                {
+                    "res": "2 gotas cada 8 horas"
+                },
+                {
+                    "res": "2 gotas cada 6 horas"
+                }
+            ]
+        },
+        {
+            "text": "¿Por cuánto tiempo se da el cloranfenicol-sulfacetamida?",
+            "ans": [
+                {
+                    "res": "Por no más de 7 días",
+                    "correct": true
+                },
+                {
+                    "res": "Por 7 días"
+                },
+                {
+                    "res": "Por 7-12 días"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la dosis del cloranfenicol-sulfacetamida?",
+            "ans": [
+                {
+                    "res": "Adulto 2 gotas cada 8-12 horas"
+                },
+                {
+                    "res": "Adultos 3 gotas cada 4-6 horas"
+                },
+                {
+                    "res": "Adultos 2 gotas cada 4 a 6 horas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "De los siguientes, ¿cuál no es uso de la hipromelosa?",
+            "ans": [
+                {
+                    "res": "Lubricante ocular"
+                },
+                {
+                    "res": "Protector ocular"
+                },
+                {
+                    "res": "Infecciones oculares",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Riesgo en el embarazo del lanolina y aceite mineral",
+            "ans": [
+                {
+                    "res": "A",
+                    "correct": true
+                },
+                {
+                    "res": "C"
+                },
+                {
+                    "res": "X"
+                }
+            ]
+        },
+        {
+            "text": "Medicamento oftálmico que se utiliza posterior a una cirugía ocular",
+            "ans": [
+                {
+                    "res": "Hipromelosa"
+                },
+                {
+                    "res": "Cloranfenicol"
+                },
+                {
+                    "res": "Lanolina y aceite mineral",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Uso de neomicina, polimixina B y gramicidina",
+            "ans": [
+                {
+                    "res": "Infecciones",
+                    "correct": true
+                },
+                {
+                    "res": "Protector"
+                },
+                {
+                    "res": "Lubricante"
+                }
+            ]
+        },
+        {
+            "text": "La neomicina, polimixina B y gramicidina se da los primeros dos días, ¿cada cuantas horas?",
+            "ans": [
+                {
+                    "res": "Cada 2 horas",
+                    "correct": true
+                },
+                {
+                    "res": "Cada 4 horas"
+                },
+                {
+                    "res": "Cada 6 horas"
+                }
+            ]
+        }
+    ]
+}

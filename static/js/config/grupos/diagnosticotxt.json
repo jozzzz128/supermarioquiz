@@ -1,0 +1,101 @@
+{
+    "prefix": "Diagnostico:",
+    "title": "Enfermedades autoinmunes",
+    "dataBanc": 1,
+    "allCorrect": true,
+    "questions": [
+        {
+            "text": "Tienes dolor abdominal o torácico?"
+        },
+        {
+            "text": "Sufres de diarrea o estreñimiento?"
+        },
+        {
+            "text": "Sufres de fatiga constante?"
+        },
+        {
+            "text": "Cuentas con dolores musculares y articulares?"
+        },
+        {
+            "text": "Padeces dolores de cabeza persisitentes?"
+        },
+        {
+            "text": "Tienes convulsiones?"
+        },
+        {
+            "text": "Sufres de picor constante?"
+        },
+        {
+            "text": "Cuentas con nauseas y vomito?"
+        },
+        {
+            "text": "Sufres de perdida de memoria?"
+        },
+        {
+            "text": "Sufres vertigo?"
+        },
+        {
+            "text": "Sufres de palidez cutánea?"
+        },
+        {
+            "text": "Sientes debilidad?"
+        },
+        {
+            "text": "Cuentas con facilidad de sangrado y aparicion de hematomas?"
+        },
+        {
+            "text": "Sufres de fiebre?"
+        },
+        {
+            "text": "Has notado disminucion del sentido del gusto y del olfato?"
+        },
+        {
+            "text": "Deseas que tu diagnostico sea general o específico?",
+            "ans": [
+                {
+                    "res" : "General",
+                    "value": 0
+                },
+                {
+                    "res" : "Específico",
+                    "value": 1
+                }
+            ]
+        }
+    ],
+    "globalAns": [
+        {
+            "res": "No<br><br>",
+            "value": 0
+        },
+        {
+            "res": "Leve",
+            "value": 0.3
+        },
+        {
+            "res": "Moderado<br><br>",
+            "value": 0.4
+        },
+        {
+            "res": "Regular",
+            "value": 0.5
+        },
+        {
+            "res": "Muy regular<br><br>",
+            "value": 0.6
+        },
+        {
+            "res": "Intenso",
+            "value": 0.7
+        },
+        {
+            "res": "Extremo<br><br>",
+            "value": 0.8
+        },
+        {
+            "res": "Insoportable",
+            "value": 0.9
+        }
+    ],
+    "url" : "/formanswers"
+}

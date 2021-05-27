@@ -80,7 +80,7 @@ body{
 
 #container .load-screen .content .title{
     font-family: 'titles';
-    font-size: 8vw;
+    font-size: 7vw;
     display: inline-block;
 }
 
@@ -184,7 +184,14 @@ body{
     z-index: 1;
     display: flex;
     align-items:flex-end;
-    justify-content: center;
+    justify-content: space-around;
+    padding-left:14vw;
+    padding-right:14vw;
+}
+
+#container .world .wallpaper.reduced{
+    padding-left:15vw;
+    padding-right:1vw;
 }
 
 #container .world .floor{
@@ -195,7 +202,6 @@ body{
     background-position:-1vw 0 !important;
     background-size:3vw !important;
 }
-
 
 #container .world .floor #bgmusic-control{
     position: absolute;
@@ -213,7 +219,6 @@ body{
 #container .world .floor #bgmusic-control.off .icon-music-off{
     display: inline-block;
 }
-
 
 #container .world .wallpaper ul.blocks{
     display: flex;
@@ -259,8 +264,7 @@ body{
     position: relative;
     display: inline-flex;
     justify-content: center;
-    margin: 0 7vw;
-
+    margin: 0 0.5vw;
 }
 
 #container .world .pipe .cover{
@@ -277,7 +281,8 @@ body{
 
 #container .world .pipe .answer{
     position: absolute;
-    top: -8vw;
+    bottom: calc(100% + 1vw);
+    font-size: 1.3vw;
     text-align: center;
     cursor: pointer;
 }
@@ -384,4 +389,52 @@ body{
 
 #container .world .menu-screen h2.sign.change{
     animation: changeTitleScreen 2s linear;
+}
+
+/*Prompt checkbox*/
+#pop-check{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000000000;
+    background: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#pop-check .checkboxes{
+    padding: 20px 200px;
+    box-sizing: border-box;
+}
+
+#pop-check .checkboxes label{
+    display: inline-flex;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+#pop-check .checkboxes label input{
+    margin-right: 5px;
+    transform: scale(2);
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 14px;
+}
+
+#pop-check button{
+    background: #333;
+    font-size: 22px;
+    padding:15px;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    margin-top: 20px;
 }

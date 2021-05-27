@@ -1,0 +1,368 @@
+{
+    "prefix": "Grupo 5:",
+    "title": "Enfermedades infecciosas y parasitarias",
+    "dataBanc": 0.4,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "Inhibe la captura de glucosa en los helmintos susceptibles, ¿de qué medicamento hablamos?",
+            "ans": [
+                {
+                    "res": "Albendazol",
+                    "correct": true
+                },
+                {
+                    "res": "Metronidazol"
+                },
+                {
+                    "res": "Bencilpenicilina procaínica"
+                }
+            ]
+        },
+        {
+            "text": "¿Para cuál no se usa el albendazol?",
+            "ans": [
+                {
+                    "res": "Teniasis"
+                },
+                {
+                    "res": "Ascariasis"
+                },
+                {
+                    "res": "Diarrea",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Presentación del metronidazol",
+            "ans": [
+                {
+                    "res": "Tableta 250 mg"
+                },
+                {
+                    "res": "Tableta 500 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tableta 100 mg"
+                }
+            ]
+        },
+        {
+            "text": "Uso del metronidazol",
+            "ans": [
+                {
+                    "res": "Tricomonas",
+                    "correct": true
+                },
+                {
+                    "res": "Teniasis"
+                },
+                {
+                    "res": "Ascariasis"
+                }
+            ]
+        },
+        {
+            "text": "Presentación de bencilpenicilina procaínica",
+            "ans": [
+                {
+                    "res": "Tableta 100 mg"
+                },
+                {
+                    "res": "No existe presentación comercial en México",
+                    "correct": true
+                },
+                {
+                    "res": "Tableta 500 mg"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento tiene sensibilidad cruzada con cefalosporinas y otras penicilinas?",
+            "ans": [
+                {
+                    "res": "Bencilpenicilina procaínica con bencilpenicilina cristalina",
+                    "correct": true
+                },
+                {
+                    "res": "Bencilpenicilina porcaínica"
+                },
+                {
+                    "res": "Ampicilina"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuánto tiempo se deja pasar antes de iniciar con ampicilina para infecciones respiratorias?",
+            "ans": [
+                {
+                    "res": "5-7 días",
+                    "correct": true
+                },
+                {
+                    "res": "3-5 días"
+                },
+                {
+                    "res": "Se da de inmediato"
+                }
+            ]
+        },
+        {
+            "text": "De la ampicilina, ¿cuál de los siguientes no es un efecto adverso?",
+            "ans": [
+                {
+                    "res": "Náusea"
+                },
+                {
+                    "res": "Vómito"
+                },
+                {
+                    "res": "Mareo",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Dosis (cápsula) de amoxicilina",
+            "ans": [
+                {
+                    "res": "Adultos 500 mg cada 8 horas por 7 días",
+                    "correct": true
+                },
+                {
+                    "res": "Adultos 1000 mg cada 12 horas por 5 días"
+                },
+                {
+                    "res": "Adultos 50 mg cada 24 horas por 7 días"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué inhibe la amoxicilina?",
+            "ans": [
+                {
+                    "res": "Transpeptidasa",
+                    "correct": true
+                },
+                {
+                    "res": "La pared bacteriana"
+                },
+                {
+                    "res": "La reproducción"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el mecanismo de acción de la amoxicilina con ácido clavulánico?",
+            "ans": [
+                {
+                    "res": "Inhibe la síntesis de la pared bacteriana",
+                    "correct": true
+                },
+                {
+                    "res": "Inhibe la síntesis de la pared del virus"
+                },
+                {
+                    "res": "Inhibe la síntesis de la pared parasitaria"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué hace el ácido clavulanico con la amoxicilina?",
+            "ans": [
+                {
+                    "res": "Potencia y hace que la amoxicilina actúe más rápido"
+                },
+                {
+                    "res": "Potencia y hace que la amoxicilina dure más rápido"
+                },
+                {
+                    "res": "Potencia y hace que la amoxicilina no sea resistente",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso de la dicloxicilina?",
+            "ans": [
+                {
+                    "res": "Infecciones estomacales"
+                },
+                {
+                    "res": "Infecciones de la piel",
+                    "correct": true
+                },
+                {
+                    "res": "Infecciones generales"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la dosis en niños de la eritromicina?",
+            "ans": [
+                {
+                    "res": "Suspensión oral 250 mg/5 ml, 40 mg/kg/día dividido cada 6 horas.",
+                    "correct": true
+                },
+                {
+                    "res": "Suspensión oral 25 mg/5 ml, 40 mg/kg/día dividido cada 6 horas."
+                },
+                {
+                    "res": "Suspensión oral 350 mg/5 ml, 40 mg/kg/día dividido cada 6 horas"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento se da cuando se tiene alergia a la penicilina?",
+            "ans": [
+                {
+                    "res": "Amoxicilina"
+                },
+                {
+                    "res": "Eritromicina",                    
+                    "correct": true
+                },
+                {
+                    "res": "Dicloxicilina"                    
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento se da cuando se tiene alergia a la penicilina?",
+            "ans": [
+                {
+                    "res": "Amoxicilina"
+                },
+                {
+                    "res": "Eritromicina",                    
+                    "correct": true
+                },
+                {
+                    "res": "Dicloxicilina"                    
+                }
+            ]
+        },
+        {
+            "text": "¿Qué sucede si juntas nitrofurantoina con quinolonas?",
+            "ans": [
+                {
+                    "res": "Aumenta su efecto terapéutico"
+                },
+                {
+                    "res": "No interactúan"
+                },
+                {
+                    "res": "Disminuye su efecto terapéutico",                    
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo no se da la nitrofurantoina?",
+            "ans": [
+                {
+                    "res": "En el primer trimestre de embarazo"
+                },
+                {
+                    "res": "En el segundo trimestre de embarazo"
+                },
+                {
+                    "res": "En el último trimestre de embarazo",                    
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "El trimetoprima con sulfametoxazol, ¿Cuándo está contraindicado?",
+            "ans": [
+                {
+                    "res": "Insuficiencia hepática",                    
+                    "correct": true
+                },
+                {
+                    "res": "Síndrome de Stevens Johnson"
+                },
+                {
+                    "res": "Diarrea infecciosa"
+                }
+            ]
+        },
+        {
+            "text": "¿A qué no potencia el efecto la trimetoprima con sulfametoxazol?",
+            "ans": [
+                {
+                    "res": "Anticoagulantes"
+                },
+                {
+                    "res": "Hipoglucemiantes orales"
+                },
+                {
+                    "res": "Acidificantes urinarios",                    
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Qué riesgo en el embarazo tiene la doxiciclina?",
+            "ans": [
+                {
+                    "res": "B"
+                },
+                {
+                    "res": "D",                 
+                    "correct": true
+                },
+                {
+                    "res": "X"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál no es el uso de la doxiciclina?",
+            "ans": [
+                {
+                    "res": "Cólera"
+                },
+                {
+                    "res": "Acné"
+                },
+                {
+                    "res": "Estreñimiento",                 
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento ha creado mucha resistencia?",
+            "ans": [
+                {
+                    "res": "Amoxicilina"
+                },
+                {
+                    "res": "Cloranfenicol",
+                    "correct": true
+                },
+                {
+                    "res": "Eritromicina"                
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso de la nistatina?",
+            "ans": [
+                {
+                    "res": "Diarrea infecciosa"
+                },
+                {
+                    "res": "Candidiasis",
+                    "correct": true
+                },
+                {
+                    "res": "Tenias"                
+                }
+            ]
+        }
+    ]
+}

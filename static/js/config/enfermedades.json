@@ -1,0 +1,50 @@
+[{
+    "name": "Enfermedad de Adison",
+    "resumen": "Específicamente, las glándulas suprarrenales producen cantidades insuficientes de la hormona cortisol y, algunas veces, también de la hormona aldosterona. Cuando el cuerpo está bajo estrés (por ejemplo, combatiendo una infección), esta deficiencia de cortisol puede ocasionar una crisis addisoniana mortal, caracterizada por la baja presión arterial.",
+    "sintomas": "Los síntomas no suelen ser específicos. Incluyen fatiga, náuseas, oscurecimiento de la piel y mareos al ponerse de pie. Las personas pueden sufrir: Áreas de dolor: abdomen o músculos. Todo el cuerpo: aturdimiento ligero, deshidratación, desmayo, fatiga, mareos, nivel bajo de azúcar en la sangre, presión arterial baja, pérdida de apetito, sudoración o trastorno hidroelectrolítico.Gastrointestinales: náusea o vómitos. También comunes: antojo de comida salada, ausencia de menstruación, debilidad muscular, deseo sexual reducido, micción excesiva, oscurecimiento de la piel o pérdida de peso." 
+},
+{
+    "name":"Sindrome Antifosfolipido",
+    "resumen": "Trastorno en el que el sistema inmunológico ataca por error a las proteínas normales en la sangre. El síndrome antifosfolipídico puede ocasionar que se formen coágulos de sangre en las arterias, las venas y los órganos. También puede causar abortos espontáneos y muerte fetal en las mujeres embarazadas.",
+    "sintomas":"Los síntomas incluyen coágulos de sangre en las piernas, los brazos o los pulmones. Los abortos espontáneos recurrentes también pueden ser comunes. Las personas pueden sufrir: Áreas de dolor: pecho Respiratorios: coágulos sanguíneos en los pulmones o dificultad para respirar También comunes: aborto recurrente, color violáceo en la piel, dolor en el área afectada, hinchazón de una extremidad o trombosis venosa profunda"
+},
+{
+    "name":"Hepatitis Autoinmune",
+    "resumen": "Inflamación hepática que se produce cuando el sistema inmunológico ataca al hígado.",
+    "sintomas":"Los síntomas incluyen fatiga, malestar abdominal y dolor en las articulaciones. Las personas pueden sufrir: Áreas de dolor: abdomen o articulaciones. Gastrointestinales: líquido en el abdomen, náusea o vómitos. Todo el cuerpo: fatiga, malestar o pérdida de apetito. Piel: piel y ojos amarillos o red de vasos sanguíneos inflamados en la piel"
+},
+{
+    "name":"Enfermedad Celiaca",
+    "resumen":"Reacción inmunológica ante la ingesta de gluten, una proteína presente en el trigo, la cebada y el centeno. Con el tiempo, la reacción inmunológica al ingerir gluten genera una inflamación que daña el revestimiento del intestino delgado y produce complicaciones médicas.",
+    "sintomas":"El síntoma típico es la diarrea. Otros síntomas incluyen distensión abdominal, fatiga, niveles bajos de hemoglobina (anemia) y osteoporosis. Muchas personas no presentan síntomas."
+},
+{
+    "name":"Tiroiditis de Hashimoto",
+    "resumen":"Afección en la que el sistema inmunológico ataca a la glándula con forma de mariposa ubicada en el cuello (tiroides). Inicialmente, la inflamación de la glándula tiroides ocasiona una filtración que tiene como resultado un exceso de las hormonas tiroideas (hipertiroidismo).",
+    "sintomas":"Los síntomas incluyen fatiga y aumento de peso inexplicable. Las personas pueden sufrir: Piel: seca o áspera. Pelo: caída del pelo o sequedad También comunes: agrandamiento de la tiroides, articulación rígida, aumento de peso, debilidad muscular, depresión, estreñimiento, fatiga, frecuencia cardíaca lenta, hinchazón en las extremidades, ojos hinchados o sensibilidad al frío."
+},
+{
+    "name":"Anemia Perniciosa",
+    "resumen":"Disminución de glóbulos rojos cuando el cuerpo no puede absorber suficiente vitamina B12. Las causas más comunes son el revestimiento estomacal debilitado o los trastornos autoinmunes. Los síntomas incluyen fatiga y debilidad.",
+    "sintomas":"Todo el cuerpo: aturdimiento ligero o fatiga. También comunes: dificultad para respirar, inflamación del estómago, palidez, pérdida de peso o sensación de hormigueo."
+},
+{
+    "name":"Cirrosis Biliar Primaria",
+    "resumen":"Enfermedad autoinmune que provoca la destrucción progresiva de los conductos biliares. En la cirrosis biliar primaria, los conductos biliares se inflaman y finalmente colapsan, lo que provoca daño hepático. Con el paso del tiempo, puede llegar a provocar cirrosis.",
+    "sintomas":"En las primeras etapas, es posible que las personas no experimenten síntomas. Cuando sí ocurren, incluyen fatiga, comezón o color amarillento de la piel."
+},
+{
+    "name":"Sarcoidosis",
+    "resumen":"Crecimiento de pequeños grupos de células inflamatorias en diferentes partes del cuerpo. Las neoplasias suelen ocurrir con mayor frecuencia en los pulmones, los nódulos linfáticos, los ojos y la piel.",
+    "sintomas":"Las personas pueden sufrir: Áreas de dolor: ojos. Todo el cuerpo: fatiga, malestar o sudores nocturnos. Ojos: enrojecimiento, picazón o sequedad. Piel: bultos rojos y sensibles o erupciones. Visuales: sensibilidad a la luz o visión borrosa. Respiratorios: dificultad para respirar o sibilancias. También comunes: ganglios linfáticos inflamados, pérdida de peso o tos"
+},
+{
+    "name":"Sindrome Sjogren",
+    "resumen":"Trastorno del sistema inmunológico caracterizado por la sequedad de los ojos y la boca. En esta enfermedad, el sistema inmunológico del cuerpo ataca a sus propias células saludables que producen saliva y lágrimas. El síndrome de Sjögren suele ocurrir junto con otros trastornos, como la artritis reumatoide y el lupus.",
+    "sintomas":"Áreas de dolor: articulaciones o músculos. Sensitivo: anormalidad del gusto, hormigueo o pérdida del gusto. Boca: caries, sequedad o úlceras. Habla: ronquera o voz defectuosa. Garganta: dificultad para tragar o seca. También comunes: articulación rígida, fatiga, ganglios linfáticos inflamados, piel seca, rigidez, sequedad vaginal, síndrome del ojo seco o tos seca."
+},
+{
+    "name":"Lupus Eritematoso Sistematico",
+    "resumen":"Enfermedad inflamatoria ocasionada cuando el sistema inmunológico ataca a sus propios tejidos. El lupus (LES) puede afectar las articulaciones, la piel, los riñones, los glóbulos, el cerebro, el corazón y los pulmones..",
+    "sintomas":"Los síntomas varían, pero suelen incluir fatiga, dolor de articulaciones, sarpullidos y fiebre. Pueden exacerbarse periódicamente (brotes) para luego mejorar. Las personas pueden sufrir: Áreas de dolor: músculos. Tipos de dolor: agudo en el pecho. Todo el cuerpo: anemia, fatiga, fiebre o malestar. Piel: erupciones escamosas o erupciones rojas. Pelo: caída del pelo o caída del pelo del cuero cabelludo. Boca: sequedad o úlceras. También comunes: ansiedad, articulación rígida, dolor de cabeza, erupción facial, fenómeno de raynaud, hinchazón, pérdida de peso, retención de agua, sangre en la orina, sensibilidad a la luz o trastorno depresivo mayor"
+}]

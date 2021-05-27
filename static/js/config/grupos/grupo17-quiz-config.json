@@ -1,0 +1,83 @@
+{
+    "prefix": "Grupo 17:",
+    "title": "Planificación familiar",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál es el uso del levonorgestrel?",
+            "ans": [
+                {
+                    "res": "Pastilla del día siguiente",
+                    "correct": true
+                },
+                {
+                    "res": "Regular el ciclo menstrual"
+                },
+                {
+                    "res": "Infecciones vaginales"
+                }
+            ]
+        },
+        {
+            "text": "Riesgo en el embarazo del levonorgestrel",
+            "ans": [
+                {
+                    "res": "A"
+                },
+                {
+                    "res": "C"
+                },
+                {
+                    "res": "X",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "El desogestrel y etinilestradiol, ¿qué otro uso tiene además de anticonceptivo?",
+            "ans": [
+                {
+                    "res": "Solo como anticonceptivo"
+                },
+                {
+                    "res": "Disminorrea",
+                    "correct": true
+                },
+                {
+                    "res": "Colitis"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué anticonceptivo tiene máxima protección anticonceptiva con mayores efectos adversos?",
+            "ans": [
+                {
+                    "res": "Norestisterona y estradiol"
+                },
+                {
+                    "res": "Norestisterona y estinilestradiol",
+                    "correct": true
+                },
+                {
+                    "res": "Desogestrel y etinilestradiol"
+                }
+            ]
+        },
+        {
+            "text": "Presentación del norestisterona y etinilestradiol",
+            "ans": [
+                {
+                    "res": "Tableta 0.400 mg/0.035 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tableta 0.035/0.400 mg"
+                },
+                {
+                    "res": "Tableta 0.040/0.350 mg"
+                }
+            ]
+        }
+    ]
+}

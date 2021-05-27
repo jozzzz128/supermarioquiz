@@ -1,0 +1,68 @@
+{
+    "prefix": "Grupo 6:",
+    "title": "Enfermedades Inmunoalérgicas",
+    "dataBanc": 0.4,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál de los siguientes fármacos para alergias tiene como famoso efecto adverso la somnolencia y se potencia con bebidas alcohólicas?",
+            "ans": [
+                {
+                    "res": "Loratadina"
+                },
+                {
+                    "res": "Cetrizina"
+                },
+                {
+                    "res": "Clorfenamina",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes NO es una de las presentaciones de la Clorfenamina?",
+            "ans": [
+                {
+                    "res": "Tabletas"
+                },
+                {
+                    "res": "Parche transdérmico",
+                    "correct": true
+                },
+                {
+                    "res": "Jarabe"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuántos mg diarios corresponden a la dosis de Loratadina para niños de entre 2-6 años?",
+            "ans": [
+                {
+                    "res": "5 mg"
+                },
+                {
+                    "res": "10 mg",
+                    "correct": true
+                },
+                {
+                    "res": "15 mg"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes corresponde al mecanismo de acción de la Loratadina?",
+            "ans": [
+                {
+                    "res": "Antihistamínico de receptores H1"
+                },
+                {
+                    "res": "Vasoconstrictor y analgésico",
+                    "correct": true
+                },
+                {
+                    "res": "Antiemético"
+                }
+            ]
+        }
+    ]
+}

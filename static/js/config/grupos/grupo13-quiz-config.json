@@ -1,0 +1,143 @@
+{
+    "prefix": "Grupo 13:",
+    "title": "Neurología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuáles son las contraindicaciones de la fenitoína?",
+            "ans": [
+                {
+                    "res": "Insuficiencia hepática",
+                    "correct": true
+                },
+                {
+                    "res": "Gastritis"
+                },
+                {
+                    "res": "Colitis"
+                }
+            ]
+        },
+        {
+            "text": "¿Se puede dar la fenitoína en el embarazo?",
+            "ans": [
+                {
+                    "res": "Sí, siempre y cuando se haga ultrasonido mensual"
+                },
+                {
+                    "res": "No se debe dar en los primeros 3 meses de embarazo",
+                    "correct": true
+                },
+                {
+                    "res": "No se debe dar en el último trimestre"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento se da, si el primer tratamiento en la neuropatía diabética no sirvió?",
+            "ans": [
+                {
+                    "res": "Fenitoina",
+                    "correct": true
+                },
+                {
+                    "res": "Carbamazepina"
+                },
+                {
+                    "res": "Valproato de magnesio"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo se da la carbamazepina?",
+            "ans": [
+                {
+                    "res": "Cuando no hay ácido valproico",
+                    "correct": true
+                },
+                {
+                    "res": "Cuando no hay valproato de magnesio"
+                },
+                {
+                    "res": "Cuando no hay fenitoina"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué riesgo en el embarazo es el ácido valproico?",
+            "ans": [
+                {
+                    "res": "C"
+                },
+                {
+                    "res": "D"
+                },
+                {
+                    "res": "X",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Los siguientes son efectos adversos del ácido valproico, excepto:",
+            "ans": [
+                {
+                    "res": "Ataxia"
+                },
+                {
+                    "res": "Somnolencia"
+                },
+                {
+                    "res": "Insomnio",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Uso del valproato de magnesio",
+            "ans": [
+                {
+                    "res": "Profilaxis en migrañas",
+                    "correct": true
+                },
+                {
+                    "res": "Desnutrición"
+                },
+                {
+                    "res": "Infecciones oculares"
+                }
+            ]
+        },
+        {
+            "text": "El valproato de magnesia, ¿Por cuánto tiempo se debe dar para que no aparezcan efectos adversos?",
+            "ans": [
+                {
+                    "res": "7-5 días"
+                },
+                {
+                    "res": "3-5 días"
+                },
+                {
+                    "res": "2-3 días",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "El valproato de magnesia, ¿Por cuánto tiempo se debe dar para que no aparezcan efectos adversos?",
+            "ans": [
+                {
+                    "res": "7-5 días"
+                },
+                {
+                    "res": "3-5 días"
+                },
+                {
+                    "res": "2-3 días",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

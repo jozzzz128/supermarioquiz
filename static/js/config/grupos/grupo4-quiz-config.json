@@ -1,0 +1,98 @@
+{
+    "prefix": "Grupo 4:",
+    "title": "Endocrinología y Metabolismo",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál de los siguientes NO es un efecto adverso de la Glibenclamida?",
+            "ans": [
+                {
+                    "res": "Anemia hemolítica"
+                },
+                {
+                    "res": "Hipotensión",
+                    "correct": true
+                },
+                {
+                    "res": "Hepatitis reactiva"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación de la Glibenclamida?",
+            "ans": [
+                {
+                    "res": "Tabletas 5 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas 15 mg"
+                },
+                {
+                    "res": "Tabletas 50 mg"
+                }
+            ]
+        },
+        {
+            "text": "Este medicamento se considera la “piedra angular” y base del tratamiento farmacológico para diabetes mellitus 2…",
+            "ans": [
+                {
+                    "res": "Metformina",
+                    "correct": true
+                },
+                {
+                    "res": "Glibenclamida"
+                },
+                {
+                    "res": "Insulina"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos para tratar diabetes mellitus 2 tiene una importante interacción que repercute en la absorción de vitamina B12?",
+            "ans": [
+                {
+                    "res": "Insulina"
+                },
+                {
+                    "res": "Metformina",
+                    "correct": true
+                },
+                {
+                    "res": "Pioglitazona"
+                }
+            ]
+        },
+        {
+            "text": "Según la correcta dosificación de insulina ¿Cuál de los siguientes enunciados es erróneo?",
+            "ans": [
+                {
+                    "res": "Aplicar la dosis de la mañana y de la noche 15 minutos antes de los alimentos"
+                },
+                {
+                    "res": "La dosis nocturna debe dividirse en tercios: 2/3 NPH y 1/3 insulina rápida",
+                    "correct": true
+                },
+                {
+                    "res": "Dividir la dosis TOTAL en 2/3 de la mañana y 1/3 de la noche"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes es la forma correcta de calcular la dosis total diaria de insulina?",
+            "ans": [
+                {
+                    "res": "0.2 UI/kg",
+                    "correct": true
+                },
+                {
+                    "res": "0.5 UI/kg"
+                },
+                {
+                    "res": "0.4 UI/kg"
+                }
+            ]
+        }
+    ]
+}

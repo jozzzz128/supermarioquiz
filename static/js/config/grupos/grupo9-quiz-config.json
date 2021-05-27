@@ -1,0 +1,68 @@
+{
+    "prefix": "Grupo 9:",
+    "title": "Hematología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "En cuanto a la deficiencia de hierro ¿Cuál de las siguientes opciones es la mejor como tratamiento para adultos?",
+            "ans": [
+                {
+                    "res": "Tabletas de Fumarato ferroso",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas de Sulfato ferroso"
+                },
+                {
+                    "res": "Suspensión oral de Fumarato ferroso"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la dosis preventiva de Fumarato ferroso para deficiencia de hierro?",
+            "ans": [
+                {
+                    "res": "100 mg al día",
+                    "correct": true
+                },
+                {
+                    "res": "400 mg al día"
+                },
+                {
+                    "res": "200 mg al día"
+                }
+            ]
+        },
+        {
+            "text": "En cuanto a la deficiencia de hierro ¿Cuál de las siguientes opciones es la mejor como tratamiento para niños?",
+            "ans": [
+                {
+                    "res": "Suspensión oral de Fumarato ferroso",
+                    "correct": true
+                },
+                {
+                    "res": "Suspensión oral de Sulfato ferroso"
+                },
+                {
+                    "res": "Tabletas de Sulfato ferroso"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación del Sulfato ferroso?",
+            "ans": [
+                {
+                    "res": "Tabletas 500 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas 200 mg"
+                },
+                {
+                    "res": "Tabletas 75 mg"
+                }
+            ]
+        }
+    ]
+}

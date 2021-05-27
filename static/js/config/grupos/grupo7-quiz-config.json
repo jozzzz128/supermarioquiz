@@ -1,0 +1,293 @@
+{
+    "prefix": "Grupo 7:",
+    "title": "Gastroenterología",
+    "dataBanc": 0.5,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál vía de administración no es recomendable por causar necrosis de la butilhioscina-metamizo?",
+            "ans": [
+                {
+                    "res": "Vía intramuscular"
+                },
+                {
+                    "res": "Vía intravenosa",
+                    "correct": true
+                },
+                {
+                    "res": "Vía oral"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento se da para cólico intenso que no se quita con ningún otro medicamento?",
+            "ans": [
+                {
+                    "res": "Butilhiosina-metamizol",
+                    "correct": true
+                },
+                {
+                    "res": "Butilhiosina"
+                },
+                {
+                    "res": "Metoclopramida"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la prescripción de la hiosina?",
+            "ans": [
+                {
+                    "res": "1 tableta cada 6-8 horas"
+                },
+                {
+                    "res": "2 tabletas cada 12 horas"
+                },
+                {
+                    "res": "2 tabletas cada 6-8 horas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo se sospecha que el dolor puede ser quirúrgico se debe dar butilhiosina?",
+            "ans": [
+                {
+                    "res": "No se debe recetar",
+                    "correct": true
+                },
+                {
+                    "res": "Si se debe recetar"
+                },
+                {
+                    "res": "Si se debe recetar, pero por 2 días"
+                }
+            ]
+        },
+        {
+            "text": "Dentro del mecanismo de acción del bismuto esta la acción higroscópica, ¿a qué nos referimos con esto?",
+            "ans": [
+                {
+                    "res": "Que absorbe toxinas"
+                },
+                {
+                    "res": "Absorbe humedad",
+                    "correct": true
+                },
+                {
+                    "res": "Protege la mucosa"
+                }
+            ]
+        },
+        {
+            "text": "Medicamento que se da para diarrea por intoxicación alimentaria",
+            "ans": [
+                {
+                    "res": "Aluminio"
+                },
+                {
+                    "res": "Loperamida"
+                },
+                {
+                    "res": "Bismuto",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál medicamento se da para la dispepsia?",
+            "ans": [
+                {
+                    "res": "Hiosina"
+                },
+                {
+                    "res": "Magnesio"
+                },
+                {
+                    "res": "Aluminio y magnesio",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Dentro de los efectos adversos del aluminio y magnesio, ¿cuál no pertenece?",
+            "ans": [
+                {
+                    "res": "Estreñimiento"
+                },
+                {
+                    "res": "Flatulencia"
+                },
+                {
+                    "res": "Tinnitus",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "A una mujer embarazada y con estreñimiento, ¿qué medicamento se prescribe?",
+            "ans": [
+                {
+                    "res": "Aluminio y magnesio"
+                },
+                {
+                    "res": "Magnesio",
+                    "correct": true
+                },
+                {
+                    "res": "Aluminio"
+                }
+            ]
+        },
+        {
+            "text": "¿Con que se administra el magnesio?",
+            "ans": [
+                {
+                    "res": "Con 1 vaso de agua",
+                    "correct": true
+                },
+                {
+                    "res": "Con 1 vaso de jugo de naranja"
+                },
+                {
+                    "res": "Con 2 vasos de agua"
+                }
+            ]
+        },
+        {
+            "text": "Contraindicaciones del plantago psyllium",
+            "ans": [
+                {
+                    "res": "Hipotonía intestinal"
+                },
+                {
+                    "res": "Meteorismo"
+                },
+                {
+                    "res": "Oclusión intestinal",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Con cuál líquido, el plantago psyllium, se expande y forma una masa coloidal que en el intestino aumentan el volumen y ablandan el bolo fecal?",
+            "ans": [
+                {
+                    "res": "Agua",
+                    "correct": true
+                },
+                {
+                    "res": "Leche"
+                },
+                {
+                    "res": "Aceite"
+                }
+            ]
+        },
+        {
+            "text": "Medicamento que se administra como laxante para la preparación previa a estudios radiológicos",
+            "ans": [
+                {
+                    "res": "Metoclopramida"
+                },
+                {
+                    "res": "Senosidos A y B",
+                    "correct": true
+                },
+                {
+                    "res": "Plantago psyllium"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué riesgo en el embarazo es el senosido A y B?",
+            "ans": [
+                {
+                    "res": "A",
+                    "correct": true
+                },
+                {
+                    "res": "B"
+                },
+                {
+                    "res": "X"
+                }
+            ]
+        },
+        {
+            "text": "Presentación del plantago ovata-senosidos A y B",
+            "ans": [
+                {
+                    "res": "Granulado 2.7 g/15 mg en cada 5 g",
+                    "correct": true
+                },
+                {
+                    "res": "Tableta 500 mg"
+                },
+                {
+                    "res": "Granulado 5 g/30 mg en cada 5 g"
+                }
+            ]
+        },
+        {
+            "text": "Mecanismo de acción del plantago ovata-senosidos A y B",
+            "ans": [
+                {
+                    "res": "Irrita la mucosa estomacal"
+                },
+                {
+                    "res": "Irrita la mucosa"
+                },
+                {
+                    "res": "Irrita la mucosa intestinal",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es la dosis para metoclopramida?",
+            "ans": [
+                {
+                    "res": "Adultos vía oral 10 mg cada 8 horas",
+                    "correct": true
+                },
+                {
+                    "res": "Adultos vía oral 20 mg cada 8 horas"
+                },
+                {
+                    "res": "Adultos vía oral 10 mg cada 6 horas"
+                }
+            ]
+        },
+        {
+            "text": "Mecanismo de acción de la metoclopramida",
+            "ans": [
+                {
+                    "res": "Estimula la motilidad de las vías gastrointestinales superiores sin incrementar las secreciones pancreáticas biliares o gástricas",
+                    "correct": true
+                },
+                {
+                    "res": "Disminuye el tono y la amplitud de las contracciones gástricas"
+                },
+                {
+                    "res": "Estimula el bulbo duodenal y el esfínter pilórico"
+                }
+            ]
+        },
+        {
+            "text": "Medicamento que puede provocar hipotenia intestinal",
+            "ans": [
+                {
+                    "res": "Aluminio"
+                },
+                {
+                    "res": "Ranitidina"
+                },
+                {
+                    "res": "Loperamida",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

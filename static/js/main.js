@@ -1,7 +1,9 @@
 'use strict'
 var container, body = "";
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", async ()=>{
+    await requestQuiz();
+
     body = document.querySelector("body");
     container = body.querySelector("#container");
 
@@ -12,6 +14,14 @@ window.addEventListener("load",()=>{
     generateLoadScreen({
         start: true
     });
+
+    //If watermark
+    try {
+        const cookies = document.querySelector('#container + div + script');
+        const watermark = document.querySelector('#container + div');
+        if(cookies) cookies.remove();
+        if(watermark) watermark.remove();
+    } catch (e) {}
 
 });
 
@@ -69,17 +79,36 @@ async function generateLoadScreen(config = {}){
     }
     container.append(load);
 
-    if(config.question) setTimeout(() => {
+    if(config.question && randomQ) setTimeout(() => {
         generateQuestionScreen(randomQ);
         load.remove();
     },3000);
-    /*else {
-        const info = await axios.post(quiz.sendData.url);
-        generateQuestionScreen({
+    else if(config.question && quiz.url){ //setTimeout(() => {
 
-        });
-        load.remove();
-    }*/
+        const valueAll = qHistory.questions[qHistory.questions.length-1].ans.value;
+        console.log("value:", valueAll);
+
+        if(valueAll == 0 ){
+            console.log("entro");
+            qHistory.questions.pop();
+            let enfermedades = (await axios.get("/enfermedades")).data.map(enfermedad => enfermedad.name);
+            genCheckPop(enfermedades, async () => {
+                const {data} = await axios.post(quiz.url, qHistory);
+                generateQuestionScreen(false, data);
+                load.remove();
+            });
+        }
+        else {
+            console.log("no entro");
+            qHistory.questions.pop();
+            qHistory.enfermedades = [];
+            const {data} = await axios.post(quiz.url, qHistory);
+            generateQuestionScreen(false, data);
+            load.remove();
+        }
+        
+    }
+    //},3000);
 }
 
 function generateMenuScreen(){
@@ -231,7 +260,7 @@ function generateMenuScreen(){
     util.counter.display();
     container.append(world);
     music.change({
-        url: "soundtrack/SuperMarioBrosThemeSong.mp3",
+        url: "static/soundtrack/SuperMarioBrosThemeSong.mp3",
         bgmusic: true,
     });
 
@@ -239,7 +268,7 @@ function generateMenuScreen(){
     util.animate.goomba.move(world.querySelector(".wallpaper .goomba"),7.5);
 }
 
-async function generateQuestionScreen(config){
+async function generateQuestionScreen(config, data){
     //Destroy prev level
     const oldWorld = document.querySelector("#container .world");
     if(oldWorld) oldWorld.remove();
@@ -274,15 +303,22 @@ async function generateQuestionScreen(config){
             <div id="mario" class="big right"></div>
         </div>
         `;
-    //Generate bg music button
-    if(config) world.querySelector(".floor").append(util.genBgMusicButton());
-    //Generate answer pipes
-    if(config) config.ans.forEach((ans,i) => { world.querySelector(".wallpaper").append(util.genAnswerPipe({text: config.text, ans: ans, index: i})) });
+    
+    if(config){
+        //Generate bg music button
+        world.querySelector(".floor").append(util.genBgMusicButton());
+        //Generate answer pipes
+        config.ans.forEach((ans,i) => { world.querySelector(".wallpaper").append(util.genAnswerPipe({text: config.text, ans: ans, index: i})) });
+        //Redimension answer pipes
+        if(config.ans.length > 3){
+            world.querySelector(".wallpaper").classList.add("reduced");
+        }
+    }
     //Generate World level
     container.append(world);
 
     if(config) music.change({
-        url: "soundtrack/SuperMarioBrosUndergroundTheme.mp3",
+        url: "static/soundtrack/SuperMarioBrosUndergroundTheme.mp3",
         bgmusic: true,
     });
 
@@ -317,11 +353,44 @@ async function generateQuestionScreen(config){
     //Allow all answers
     if(config) util.answers.enable();
     else{
-        const results = util.answers.calcResults();
+        const results = util.answers.calcResults(data);
         //Sound Effect
         if(results.approve) music.effects.clear();
         else music.effects.gameover();
         //Show message
         world.querySelector(".menu-screen .sign .text").innerHTML = results.message;
     }
+}
+
+//Enfermedades
+function genCheckPop(enfermedades, callback){
+    const div = document.createElement("div");
+    div.id = "pop-check";
+    let innerHTMLString = `<div class="checkboxes">`;
+    enfermedades.forEach((enfermedad, i) => {
+        innerHTMLString += `
+            <label for="check-${i}">
+                <input value="${i}" id="check-${i}" type="checkbox">
+                ${enfermedad}
+            </label>
+        `;
+    });
+    innerHTMLString += `
+        </div><button id="submit-check">Guardar seleccion</button>
+    `;
+    div.innerHTML = innerHTMLString;
+    let flag = true;
+    div.querySelector("#submit-check").addEventListener("click",()=>{
+        flag = false;
+        const getEnfermedades = div.querySelectorAll('input[type="checkbox"]:checked');
+        let valuesStore = [];
+        getEnfermedades.forEach(enfer => {
+            valuesStore.push(parseFloat(enfer.value));
+        });
+        console.log(valuesStore);
+        qHistory.enfermedades = valuesStore;
+        div.remove();
+        callback();
+    });
+    document.querySelector("#container").append(div);
 }

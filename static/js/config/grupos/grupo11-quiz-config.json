@@ -1,0 +1,83 @@
+{
+    "prefix": "Grupo 11:",
+    "title": "Nefrología y Urología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Qué medicamento se puede dar con cualquier antihipertensivo?",
+            "ans": [
+                {
+                    "res": "Hidroclorotiazida",
+                    "correct": true
+                },
+                {
+                    "res": "Paracetamol"
+                },
+                {
+                    "res": "Furosemida"
+                }
+            ]
+        },
+        {
+            "text": "Usos de la hidroclorotiazida",
+            "ans": [
+                {
+                    "res": "Hipertensión arterial leve a moderada"
+                },
+                {
+                    "res": "Edema"
+                },
+                {
+                    "res": "Ambas son correctas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo está contraindicada la furosemida?",
+            "ans": [
+                {
+                    "res": "Edema"
+                },
+                {
+                    "res": "Embarazo en el primer trimestre",
+                    "correct": true
+                },
+                {
+                    "res": "Insuficiencia renal"
+                }
+            ]
+        },
+        {
+            "text": "Dentro de los efectos adversos de la fenazopiridina, ¿cuál no pertenece?",
+            "ans": [
+                {
+                    "res": "Insuficiencia renal"
+                },
+                {
+                    "res": "Insuficiencia cardiaca",
+                    "correct": true
+                },
+                {
+                    "res": "Insuficiencia hepática"
+                }
+            ]
+        },
+        {
+            "text": "Dentro de los efectos adversos de la fenazopiridina, ¿cuál no pertenece?",
+            "ans": [
+                {
+                    "res": "Insuficiencia renal"
+                },
+                {
+                    "res": "Insuficiencia cardiaca",
+                    "correct": true
+                },
+                {
+                    "res": "Insuficiencia hepática"
+                }
+            ]
+        }
+    ]
+}

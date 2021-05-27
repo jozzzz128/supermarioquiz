@@ -1,0 +1,218 @@
+{
+    "prefix": "Grupo 18:",
+    "title": "Reumatología y traumatología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "Según su mecanismo de acción ¿A cuál de estos grupos pertenece el Alopurinol?",
+            "ans": [
+                {
+                    "res": "Inhibidores de la uricosíntesis",
+                    "correct": true
+                },
+                {
+                    "res": "Uricosúricos"
+                },
+                {
+                    "res": "Urocolíticos"
+                }
+            ]
+        },
+        {
+            "text": "Es un fármaco recetado para hiperuricemia o gota, cuyos efectos adversos principales incluyen exantema y hepatotoxicidad…",
+            "ans": [
+                {
+                    "res": "Piroxicam"
+                },
+                {
+                    "res": "Alopurinol",
+                    "correct": true
+                },
+                {
+                    "res": "Ketoprofeno"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos del grupo de reumatología y traumatología es el mejor antiinflamatorio?",
+            "ans": [
+                {
+                    "res": "Diclofenaco",
+                    "correct": true
+                },
+                {
+                    "res": "Sulindaco"
+                },
+                {
+                    "res": "Piroxicam"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes NO es una presentación del Diclofenaco?",
+            "ans": [
+                {
+                    "res": "Solución oftálmica"
+                },
+                {
+                    "res": "Solución inyectable"
+                },
+                {
+                    "res": "Grageas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Este fármaco se considera la segunda mejor opción para tratar la dismenorrea…",
+            "ans": [
+                {
+                    "res": "Meloxicam"
+                },
+                {
+                    "res": "Piroxicam"
+                },
+                {
+                    "res": "Ketoprofeno",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Tinnitus, trastornos visuales, nefrotoxicidad y flatulencias son algunos de los principales efectos adversos de este fármaco…",
+            "ans": [
+                {
+                    "res": "Alopurinol"
+                },
+                {
+                    "res": "Ketoprofeno",
+                    "correct": true
+                },
+                {
+                    "res": "Diclofenaco"
+                }
+            ]
+        },
+        {
+            "text": "¿Cada cuánto está indicado que se debe dar en adultos la dosis vía oral de Meloxicam?",
+            "ans": [
+                {
+                    "res": "Cada 24h",
+                    "correct": true
+                },
+                {
+                    "res": "Cada 6h"
+                },
+                {
+                    "res": "Cada 8h"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos del grupo de reumatología y traumatología es el mejor para tratar dolor siempre y cuando haya inflamación presente?",
+            "ans": [
+                {
+                    "res": "Piroxicam"
+                },
+                {
+                    "res": "Naproxeno"
+                },
+                {
+                    "res": "Meloxicam",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el efecto adverso más característico del Naproxeno?",
+            "ans": [
+                {
+                    "res": "Alta irritabilidad gástrica",
+                    "correct": true
+                },
+                {
+                    "res": "Nefrotoxicidad"
+                },
+                {
+                    "res": "Hepatotoxicidad"
+                }
+            ]
+        },
+        {
+            "text": "En el adulto ¿Cuál es la dosis máxima al día de Naproxeno?",
+            "ans": [
+                {
+                    "res": "1500 mg",
+                    "correct": true
+                },
+                {
+                    "res": "1200 mg"
+                },
+                {
+                    "res": "850 mg"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos del grupo de reumatología y traumatología es el mejor para tratar dolor siempre y cuando NO haya inflamación presente?",
+            "ans": [
+                {
+                    "res": "Ketoprofeno"
+                },
+                {
+                    "res": "Piroxicam",
+                    "correct": true
+                },
+                {
+                    "res": "Alopurinol"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes indicaciones es correcta en cuanto a la toma de Piroxicam?",
+            "ans": [
+                {
+                    "res": "Se toma antes de dormir"
+                },
+                {
+                    "res": "Se toma en ayunas"
+                },
+                {
+                    "res": "Se toma después del desayuno",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos del grupo de reumatología y traumatología es el que menos efectos adversos gastrointestinales genera?",
+            "ans": [
+                {
+                    "res": "Naproxeno"
+                },
+                {
+                    "res": "Sulindaco",
+                    "correct": true
+                },
+                {
+                    "res": "Ketoprofeno"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación del Sulindaco?",
+            "ans": [
+                {
+                    "res": "Tabletas 200 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas 20 mg"
+                },
+                {
+                    "res": "Tabletas 500 mg"
+                }
+            ]
+        }
+    ]
+}

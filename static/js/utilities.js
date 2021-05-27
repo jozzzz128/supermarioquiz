@@ -46,42 +46,42 @@ const music = {
     effects: {
         pipe: () => {
             music.change({
-                url: "soundtrack/pipes.mp3"
+                url: "static/soundtrack/pipes.mp3"
             });
         },
         load: () => {
             music.change({
-                url: "soundtrack/painting.mp3",
+                url: "static/soundtrack/painting.mp3",
                 start: 0.5
             });
         },
         jump: () => {
             music.change({
-                url: "soundtrack/jump.mp3",
+                url: "static/soundtrack/jump.mp3",
                 start: 0.2,
                 end: 0.75
             });
         },
         itemBlock: () => {
             music.change({
-                url: "soundtrack/item-block.mp3",
+                url: "static/soundtrack/item-block.mp3",
                 start: 0.3
             });
         },
         powerUp: () => {
             music.change({
-                url: "soundtrack/PowerUp.mp3",
+                url: "static/soundtrack/PowerUp.mp3",
                 end: 1.4
             });
         },
         gameover: () => {
             music.change({
-                url: "soundtrack/gameover.mp3"
+                url: "static/soundtrack/gameover.mp3"
             });
         },
         clear: () => {
             music.change({
-                url: "soundtrack/stage_clear.mp3"
+                url: "static/soundtrack/stage_clear.mp3"
             });
         },
     },
@@ -226,16 +226,22 @@ const util = {
             question.ans = util.randomiceArray(question.ans).map(ans => ans.res);
         }
         else{
-            question = Object.assign({}, quiz.questions[qHistory.count]);
+            //question = Object.assign({}, quiz.questions[qHistory.count]);
+            question = Object.assign({}, quiz.questions[0]);
             question.ans = question.ans.map(ans => ans.res);
         }
+        console.log(quiz.questions);
         return question;
     },
     selectAnswer: config => {
         const index = quiz.questions.findIndex(question => question.text == config.text);
         const selected = quiz.questions.splice(index, 1)[0];
         const correctIndex = selected.ans.map((ans, i) => { if(ans.correct) return i; }).filter(ans => !isNaN(ans))[0];
+
         selected.ans = selected.ans.filter(ans => ans.res == config.ans)[0];
+
+        //If global answers is on config file
+        if(quiz.allCorrect) selected.ans.correct = true;
 
         qHistory.questions.push(selected);
         qHistory.count++;
@@ -282,7 +288,8 @@ const util = {
             util.answerFlag = true;
             container.querySelectorAll(".world .wallpaper .pipe").forEach(pipe => { pipe.querySelector("p").classList.remove("disable") });
         },
-        calcResults: () => {
+        calcResults: (config) => {
+            const {approveMessage, failureMessage} = config;
             const results = {
                 correct: 0,
                 total: qHistory.limit,
@@ -297,14 +304,21 @@ const util = {
             });
             //Calc if approve 
             if((results.correct / results.total) >= success) results.approve = true;
-            //Write message
-            if(results.approve){
+            //Write message (default)
+            //Default sucess
+            if(results.approve && !approveMessage){
                 results.message = (quiz.message && quiz.message.success) ? quiz.message.success + `\n\n${results.correct}/${results.total}` : 
                 `thank you mario! \nyour quest is over. \n\nit was a hard quest but you tried your best and succedded, \n\nwe will see you in your next quest!! \n\nscore: ${results.correct}/${results.total}`;
-            } else {
+            }
+            //Config success
+            else if(results.approve && approveMessage) results.message = `${approveMessage}`;
+            //Default failure
+            else if(!failureMessage){
                 results.message = (quiz.message && quiz.message.failure) ? quiz.message.failure : 
                 `thank you mario! \nyour quest is over. \n\nsometimes we fail, but that's no reason to surrender, \n\nwe will see you in your next quest!! \n\nscore: ${results.correct}/${results.total}`;
             }
+            //Config failure
+            else results.message = `${failureMessage} \n\nscore: ${results.correct}/${results.total}`;
             
             return results;
         }
@@ -807,7 +821,7 @@ const util = {
                     generateLoadScreen({
                         question: qHistory.count + 1
                     });
-                } //else console.log(config.skip);
+                }
             },
             receiveDamage: async config => {
                 const coords = util.getPipeCoords(config.correctPipe.querySelector('.cover'));

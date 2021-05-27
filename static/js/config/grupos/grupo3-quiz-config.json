@@ -1,0 +1,158 @@
+{
+    "prefix": "Grupo 3:",
+    "title": "Dermatología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cómo se le conoce comercialmente a la presentación de Aceite de almendras + Lanolina + Glicerina?",
+            "ans": [
+                {
+                    "res": "Caladril"
+                },
+                {
+                    "res": "Capent",
+                    "correct": true
+                },
+                {
+                    "res": "Caliderm"
+                }
+            ]
+        },
+        {
+            "text": "Es una crema recomendada para tratar piel maltratada por envejecimiento, diabetes mellitus y dermatitis por contacto…",
+            "ans": [
+                {
+                    "res": "Capent"
+                },
+                {
+                    "res": "Óxido de zinc"
+                },
+                {
+                    "res": "Caliderm",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes se considera una crema exfoliante recomendada para tratar psoriasis o piel agrietada?",
+            "ans": [
+                {
+                    "res": "Aceite de almendras"
+                },
+                {
+                    "res": "Alantoína y alquitrán de hulla",
+                    "correct": true
+                },
+                {
+                    "res": "Óxido de zinc"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes NO es un mecanismo de acción de la Alantoína y alquitrán de hulla?",
+            "ans": [
+                {
+                    "res": "Antiséptico y antipruriginoso"
+                },
+                {
+                    "res": "Disminuye la división celular de la dermis "
+                },
+                {
+                    "res": "Antagonista de receptores H1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Se considera la opción #1 para tratar quemaduras de sol…",
+            "ans": [
+                {
+                    "res": "Baño coloide",
+                    "correct": true
+                },
+                {
+                    "res": "Óxido de zinc"
+                },
+                {
+                    "res": "Miconazol"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes se considera la opción #1 para tratar lesiones por erupciones infantiles?",
+            "ans": [
+                {
+                    "res": "Aceite de almendras"
+                },
+                {
+                    "res": "Baño coloide",
+                    "correct": true
+                },
+                {
+                    "res": "Óxido de zinc"
+                }
+            ]
+        },
+        {
+            "text": "Su uso principal es para tratar micosis cutáneas…",
+            "ans": [
+                {
+                    "res": "Baño coloide"
+                },
+                {
+                    "res": "Alantoína y alquitrán de hulla"
+                },
+                {
+                    "res": "Miconazol",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Es una crema antifúngica recomendada para tratar pie de atleta, rozaduras de pañal, hongos en los pliegues de la piel…",
+            "ans": [
+                {
+                    "res": "Miconazol",
+                    "correct": true
+                },
+                {
+                    "res": "Óxido de zinc"
+                },
+                {
+                    "res": "Caliderm"
+                }
+            ]
+        },
+        {
+            "text": "A este compuesto del grupo de dermatología se le conoce comercialmente como “Pasta de Lassar”…",
+            "ans": [
+                {
+                    "res": "Baño coloide"
+                },
+                {
+                    "res": "Óxido de zinc",
+                    "correct": true
+                },
+                {
+                    "res": "Aceite de almendras"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el mecanismo de acción del Óxido de zinc?",
+            "ans": [
+                {
+                    "res": "Es un potente astringente",
+                    "correct": true
+                },
+                {
+                    "res": "Es un antipruriginoso"
+                },
+                {
+                    "res": "Ablanda la piel y exfolia"
+                }
+            ]
+        }
+    ]
+}

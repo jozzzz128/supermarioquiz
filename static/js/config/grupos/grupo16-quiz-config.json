@@ -1,0 +1,98 @@
+{
+    "prefix": "Grupo 16:",
+    "title": "Otorrinolaringología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál de los siguientes NO conforma a la tableta de Clorfenamina Compuesta?",
+            "ans": [
+                {
+                    "res": "Paracetamol"
+                },
+                {
+                    "res": "Cafeína"
+                },
+                {
+                    "res": "Loratadina",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Del grupo de otorrinolaringología ¿Cuál de los siguientes fármacos es la opción #1 para tratar el síntoma de congestión nasal?",
+            "ans": [
+                {
+                    "res": "Dimenhidrinato"
+                },
+                {
+                    "res": "Clorfenamina compuesta",
+                    "correct": true
+                },
+                {
+                    "res": "Difenidol"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes fármacos está más recomendado para tratar el mareo debido a la edad avanzada?",
+            "ans": [
+                {
+                    "res": "Difenidol",
+                    "correct": true
+                },
+                {
+                    "res": "Dimenhidrinato"
+                },
+                {
+                    "res": "Clorfenamina compuesta"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación del Difenidol?",
+            "ans": [
+                {
+                    "res": "Tabletas 25 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas 100 mg"
+                },
+                {
+                    "res": "Tabletas 50 mg"
+                }
+            ]
+        },
+        {
+            "text": "Este fármaco es el más recomendado para tratar mareo y vértigo en pacientes de entre 12-59 años…",
+            "ans": [
+                {
+                    "res": "Dimenhidrinato",
+                    "correct": true
+                },
+                {
+                    "res": "Difenidol"
+                },
+                {
+                    "res": "Clorfenamina compuesta"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación del Dimenhidrinato?",
+            "ans": [
+                {
+                    "res": "Tabletas 75 mg"
+                },
+                {
+                    "res": "Tabletas 50 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas 100 mg"
+                }
+            ]
+        }
+    ]
+}

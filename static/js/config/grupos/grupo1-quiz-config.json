@@ -1,0 +1,128 @@
+{
+    "prefix": "Grupo 1:",
+    "title": "Analgesia",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "De los mecanismos de acción del ácido acetilsalicílico, ¿Cuál no forma parte?",
+            "ans": [
+                {
+                    "res": "Inhibe la síntesis de prostaglandinas"
+                },
+                {
+                    "res": "Disminuye la secreción gástrica",
+                    "correct": true
+                },
+                {
+                    "res": "Actúa sobre el centro termorregulador en el hipotálamo"
+                }
+            ]
+        },
+        {
+            "text": "Al prescribir ácido acetilsalicílico en niños, ¿Qué complicación se puede presentar?",
+            "ans": [
+                {
+                    "res": "Síndrome de Reye",
+                    "correct": true
+                },
+                {
+                    "res": "Hemorragia gastrointestinal"
+                },
+                {
+                    "res": "Hepatitis tóxica"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el principal uso del ibuprofeno?",
+            "ans": [
+                {
+                    "res": "Fiebre"
+                },
+                {
+                    "res": "Dolor leve a moderado",
+                    "correct": true
+                },
+                {
+                    "res": "Enfermedades reumatológicas"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo está contraindicado el ibuprofeno?",
+            "ans": [
+                {
+                    "res": "En insuficiencia renal grave"
+                },
+                {
+                    "res": "En insuficiencia hepática moderada o severa"
+                },
+                {
+                    "res": "Ambas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el mejor medicamento para la fiebre?",
+            "ans": [
+                {
+                    "res": "Metamizol sódico",
+                    "correct": true
+                },
+                {
+                    "res": "Paracetamol"
+                },
+                {
+                    "res": "Ibuprofeno"
+                }
+            ]
+        },
+        {
+            "text": "El metamizol sódico, ¿qué riesgo en el embarazo tiene?",
+            "ans": [
+                {
+                    "res": "Riesgo B"
+                },
+                {
+                    "res": "Riesgo D"
+                },
+                {
+                    "res": "Riesgo X",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso del paracetamol?",
+            "ans": [
+                {
+                    "res": "Fiebre y dolor agudo o crónico",
+                    "correct": true
+                },
+                {
+                    "res": "Fiebre"
+                },
+                {
+                    "res": "Dolor crónico"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el AINE más hepatotoxico?",
+            "ans": [
+                {
+                    "res": "Ácido acetilsalicílico"
+                },
+                {
+                    "res": "Metamizol sódico"
+                },
+                {
+                    "res": "Paracetamol",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

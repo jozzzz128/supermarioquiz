@@ -1,0 +1,38 @@
+{
+    "prefix": "Grupo 10:",
+    "title": "Intoxicaciones",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Por qué se da el carbón activado?",
+            "ans": [
+                {
+                    "res": "Por intoxicaciones",
+                    "correct": true
+                },
+                {
+                    "res": "Por desnutrición"
+                },
+                {
+                    "res": "Para migraña"
+                }
+            ]
+        },
+        {
+            "text": "¿Con que no se mezcla en carbón activado?",
+            "ans": [
+                {
+                    "res": "En solución fisiológica"
+                },
+                {
+                    "res": "En solución inyectable",
+                    "correct": true
+                },
+                {
+                    "res": "En agua"
+                }
+            ]
+        }
+    ]
+}

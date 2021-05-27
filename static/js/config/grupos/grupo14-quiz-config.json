@@ -1,0 +1,203 @@
+{
+    "prefix": "Grupo 14:",
+    "title": "Nutriología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál es el uso del ácido ascórbico?",
+            "ans": [
+                {
+                    "res": "Profilaxis o tratamiento de deficiencia de vitamina C",
+                    "correct": true
+                },
+                {
+                    "res": "Anemia"
+                },
+                {
+                    "res": "Durante el embarazo"
+                }
+            ]
+        },
+        {
+            "text": "¿El ácido ascórbico se debe dar con alimentos?",
+            "ans": [
+                {
+                    "res": "No se debe dar con alimentos"
+                },
+                {
+                    "res": "Se debe dar con alimentos"
+                },
+                {
+                    "res": "Se da con o sin alimentos",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Qué estimula el ácido fólico?",
+            "ans": [
+                {
+                    "res": "La eritropoyesis"
+                },
+                {
+                    "res": "La síntesis de nucleoproteínas"
+                },
+                {
+                    "res": "Ambas son correctas",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Qué se da cuando una mujer está embarazada y desnutrida?",
+            "ans": [
+                {
+                    "res": "Ácido fólico y multivitamínico"
+                },
+                {
+                    "res": "Ácido fólico, multivitamínico y calseinato de calcio",
+                    "correct": true
+                },
+                {
+                    "res": "Ácido fólico, multivitamínico, calcinato de calcio, furamato ferroso"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué riesgo en el embarazo es el caseinato de calcio?",
+            "ans": [
+                {
+                    "res": "A",
+                    "correct": true
+                },
+                {
+                    "res": "B"
+                },
+                {
+                    "res": "C"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué contiene el caseinato de calcio?",
+            "ans": [
+                {
+                    "res": "Proteínas, grasas, minerales, vitaminas"
+                },
+                {
+                    "res": "Proteínas, grasas, vitaminas, humedad"
+                },
+                {
+                    "res": "Proteínas, grasas, minerales, humedad",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Vitaminas que actúan como coenzimas en diversas reacciones bioquímicas",
+            "ans": [
+                {
+                    "res": "Complejo B",
+                    "correct": true
+                },
+                {
+                    "res": "Caseinato de calcio"
+                },
+                {
+                    "res": "Ácido fólico"
+                }
+            ]
+        },
+        {
+            "text": "Presentación de piridoxina",
+            "ans": [
+                {
+                    "res": "Suspensión oral 25 mg/5 ml"
+                },
+                {
+                    "res": "Tableta 300 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Polvo"
+                }
+            ]
+        },
+        {
+            "text": "¿Qué medicamento se da a paciente con tuberculosis que recibe tratamiento de isoniacida?",
+            "ans": [
+                {
+                    "res": "Piridoxina",
+                    "correct": true
+                },
+                {
+                    "res": "Miel de maíz"
+                },
+                {
+                    "res": "Ácido fólico"
+                }
+            ]
+        },
+        {
+            "text": "¿A quiénes se les da miel de maíz?",
+            "ans": [
+                {
+                    "res": "Bebés menores de un año"
+                },
+                {
+                    "res": "Bebés de 1 semana a menores de 4 meses",
+                    "correct": true
+                },
+                {
+                    "res": "A niños menores de 12 años"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuándo se debe dar la miel de maíz?",
+            "ans": [
+                {
+                    "res": "Dar por la mañana con alimentos",
+                    "correct": true
+                },
+                {
+                    "res": "Dar por la tarde con alimentos"
+                },
+                {
+                    "res": "Dar por la noche con alimentos"
+                }
+            ]
+        },
+        {
+            "text": "Uso de vitamina E",
+            "ans": [
+                {
+                    "res": "Anemia"
+                },
+                {
+                    "res": "Tuberculosis"
+                },
+                {
+                    "res": "Antioxidante",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Riesgo en el embarazo de vitaminas A, C y D",
+            "ans": [
+                {
+                    "res": "A",
+                    "correct": true
+                },
+                {
+                    "res": "B"
+                },
+                {
+                    "res": "C"
+                }
+            ]
+        }
+    ]
+}

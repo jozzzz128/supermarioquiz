@@ -1,0 +1,203 @@
+{
+    "prefix": "Grupo 12:",
+    "title": "Neumología",
+    "dataBanc": 0.7,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cómo se da el ambroxol?",
+            "ans": [
+                {
+                    "res": "Primero se da nebulizaciones y después solución",
+                    "correct": true
+                },
+                {
+                    "res": "Primero se da solución y después nebulizaciones"
+                },
+                {
+                    "res": "Solo se da nebulizaciones"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el mecanismo de acción del ambroxol?",
+            "ans": [
+                {
+                    "res": "Actúa sobre los bronquios mejorando la respiración"
+                },
+                {
+                    "res": "Actúa sobre las secreciones bronquiales"
+                },
+                {
+                    "res": "Actúa sobre las secreciones bronquiales fragmentando y disgregando su organización filamentosa",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Medicamento fuera de la lista",
+            "ans": [
+                {
+                    "res": "Bromhexina",
+                    "correct": true
+                },
+                {
+                    "res": "Ambroxil"
+                },
+                {
+                    "res": "Penicilina"
+                }
+            ]
+        },
+        {
+            "text": "Medicamento fuera de la lista",
+            "ans": [
+                {
+                    "res": "Bromhexina",
+                    "correct": true
+                },
+                {
+                    "res": "Ambroxil"
+                },
+                {
+                    "res": "Penicilina"
+                }
+            ]
+        },
+        {
+            "text": "Fludifica las secreciones bronquiales por fragmentados de las fibras de mucopolisacáridos ácidos, ¿de qué medicamento se trata?",
+            "ans": [
+                {
+                    "res": "Ambroxol"
+                },
+                {
+                    "res": "Bromhexina",
+                    "correct": true
+                },
+                {
+                    "res": "Dextrometorfano"
+                }
+            ]
+        },
+        {
+            "text": "Contraindicaciones para dextrometorfano",
+            "ans": [
+                {
+                    "res": "Diabetes mellitus",
+                    "correct": true
+                },
+                {
+                    "res": "Náusea"
+                },
+                {
+                    "res": "Tos productiva"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso del dextrometorfano?",
+            "ans": [
+                {
+                    "res": "Tos seca"
+                },
+                {
+                    "res": "Tos productiva",
+                    "correct": true
+                },
+                {
+                    "res": "Gripa"
+                }
+            ]
+        },
+        {
+            "text": "Presentación del benzonatato",
+            "ans": [
+                {
+                    "res": "Perla 100 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tableta 100 mg"
+                },
+                {
+                    "res": "Gragea 100 mg"
+                }
+            ]
+        },
+        {
+            "text": "¿Por cuánto tiempo se da el benzonatato?",
+            "ans": [
+                {
+                    "res": "3 días",
+                    "correct": true
+                },
+                {
+                    "res": "5 días"
+                },
+                {
+                    "res": "7 días"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál o cuáles son las presentaciones del salbutamol?",
+            "ans": [
+                {
+                    "res": "Suspensión en aerosol, tabletas"
+                },
+                {
+                    "res": "Solución para nebulizador"
+                },
+                {
+                    "res": "Suspensión en aerosol, solución para nebulizador, ampolleta",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Riesgo en el embarazo del salbutamol",
+            "ans": [
+                {
+                    "res": "C",
+                    "correct": true
+                },
+                {
+                    "res": "X"
+                },
+                {
+                    "res": "A"
+                }
+            ]
+        },
+        {
+            "text": "Dosis de la beclometasona",
+            "ans": [
+                {
+                    "res": "Suspensión en aerosol 50 y 250 µg por inhalación",
+                    "correct": true
+                },
+                {
+                    "res": "Suspensión en aerosol 50 µg por inhalación"
+                },
+                {
+                    "res": "Suspensión en aerosol 250 µg por inhalación"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso de la beclometasona?",
+            "ans": [
+                {
+                    "res": "Tos productiva"
+                },
+                {
+                    "res": "Náusea"
+                },
+                {
+                    "res": "Alergias",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

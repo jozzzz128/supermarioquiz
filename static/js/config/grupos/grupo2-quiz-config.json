@@ -1,0 +1,128 @@
+{
+    "prefix": "Grupo 2:",
+    "title": "Cardiología",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cuál de las siguientes corresponde a la dosis inicial de Captopril?",
+            "ans": [
+                {
+                    "res": "25 mg cada 12 horas durante 30 días",
+                    "correct": true
+                },
+                {
+                    "res": "15 mg cada 8 horas durante 30 días"
+                },
+                {
+                    "res": "50 mg cada 12 horas durante 30 días"
+                }
+            ]
+        },
+        {
+            "text": "¿Según su mecanismo de acción a cuál de los siguientes grupos pertenece el Captopril?",
+            "ans": [
+                {
+                    "res": "ARA-II"
+                },
+                {
+                    "res": "IECA",
+                    "correct": true
+                },
+                {
+                    "res": "Diuréticos tiazídicos"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes corresponde a la presentación del Enalapril?",
+            "ans": [
+                {
+                    "res": "Tabletas 50 mg"
+                },
+                {
+                    "res": "Tabletas 15 mg"
+                },
+                {
+                    "res": "Tabletas 10 mg",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Este fármaco tipo IECA a diferencia del Captopril se caracteriza por no generar tos ni dolor torácico…",
+            "ans": [
+                {
+                    "res": "Losartán"
+                },
+                {
+                    "res": "Hidralazina"
+                },
+                {
+                    "res": "Enalapril",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál es el uso principal que el personal de enfermería debe darle a la Hidralazina?",
+            "ans": [
+                {
+                    "res": "Crisis hipertensiva",
+                    "correct": true
+                },
+                {
+                    "res": "Hipertensión crónica"
+                },
+                {
+                    "res": "Hipertensión durante el embarazo"
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de los siguientes NO es un efecto adverso de la Hidralazina?",
+            "ans": [
+                {
+                    "res": "Acufenos"
+                },
+                {
+                    "res": "Parestesias"
+                },
+                {
+                    "res": "Bradipnea",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "Dentro del grupo de cardiología es el fármaco más recomendado para tratar un infarto en evolución…",
+            "ans": [
+                {
+                    "res": "Hidralazina"
+                },
+                {
+                    "res": "Captopril"
+                },
+                {
+                    "res": "Nitroglicerina",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿Cuál de las siguientes NO es una presentación de la Nitroglicerina?",
+            "ans": [
+                {
+                    "res": "Parche transdérmico 18 mg"
+                },
+                {
+                    "res": "Tabletas 10 mg",
+                    "correct": true
+                },
+                {
+                    "res": "Tabletas masticables 0.8 mg"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "prefix": "Grupo 8:",
+    "title": "Gineco-obstetricia",
+    "dataBanc": 1,
+    "randomize": true,
+    "questions": [
+        {
+            "text": "¿Cada cuánto está indicado que se debe dar en adultos la dosis vía vaginal de Nistatina?",
+            "ans": [
+                {
+                    "res": "1 óvulo diario (24 horas)",
+                    "correct": true
+                },
+                {
+                    "res": "1 óvulo cada 8 horas"
+                },
+                {
+                    "res": "1 óvulo cada 12 horas"
+                }
+            ]
+        },
+        {
+            "text": "La Nistatina se usa como primera opción para tratar…",
+            "ans": [
+                {
+                    "res": "Vulvovaginitis por trichomonas"
+                },
+                {
+                    "res": "Vulvovaginitis candidiásica",
+                    "correct": true
+                },
+                {
+                    "res": "Vulvovaginitis bacteriana"
+                }
+            ]
+        },
+        {
+            "text": "En pacientes en quienes no se puede utilizar Metronidazol ¿Cuál de estos fármacos es la 2da mejor opción para tratar tricomoniasis vaginal?",
+            "ans": [
+                {
+                    "res": "Nistatina"
+                },
+                {
+                    "res": "Ketoconazol"
+                },
+                {
+                    "res": "Nitrofural",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "El Nitrofural se utiliza principalmente para tratar…",
+            "ans": [
+                {
+                    "res": "Vulvovaginitis candidiásica"
+                },
+                {
+                    "res": "Tricomoniasis vaginal"
+                },
+                {
+                    "res": "Vaginitis bacteriana",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "text": "¿La duración total del tratamiento con estrógenos no debe pasar de cuánto tiempo?",
+            "ans": [
+                {
+                    "res": "3 años"
+                },
+                {
+                    "res": "5 años",
+                    "correct": true
+                },
+                {
+                    "res": "1 año"
+                }
+            ]
+        },
+        {
+            "text": "Idealmente ¿Cada cuánto se debe valorar a la paciente que se está tratando con estrógenos conjugados?",
+            "ans": [
+                {
+                    "res": "Cada mes",
+                    "correct": true
+                },
+                {
+                    "res": "Cada 6 meses"
+                },
+                {
+                    "res": "Una vez al año"
+                }
+            ]
+        }
+    ]
+}
